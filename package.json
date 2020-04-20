@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --passWithNoTests --coverage",
     "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
     "build": "webpack --config webpack.config.prod.js"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/andela/devrepublic-bn-frontend#readme",
   "dependencies": {
+    "jest": "^25.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
