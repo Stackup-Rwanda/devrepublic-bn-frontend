@@ -25,7 +25,7 @@ jobs:
           paths:
             - ./node_modules
 
-      - run: npm test
+      - run: npm run test:coverage
 
       - store_artifacts: # upload test coverage as artifact
           path: ./coverage/lcov.info
@@ -37,6 +37,11 @@ jobs:
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
             ./cc-test-reporter before-build
+
+      - run:
+          name: Send test report to codeclimate 
+          command: |
+            ./cc-test-reporter after-build -t lcov
 
 workflows:
     version: 2
