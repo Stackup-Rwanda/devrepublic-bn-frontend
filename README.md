@@ -1,7 +1,6 @@
 # Barefoot Nomad
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/9afca66e2f87fa855f59/maintainability)](https://codeclimate.com/github/andela/devrepublic-bn-frontend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/9afca66e2f87fa855f59/test_coverage)](https://codeclimate.com/github/andela/devrepublic-bn-frontend/test_coverage) [![CircleCI](https://circleci.com/gh/andela/devrepublic-bn-frontend.svg?style=svg)](https://circleci.com/gh/andela/devrepublic-bn-frontend)
-[![Build Status](https://travis-ci.org/andela/devrepublic-bn-frontend.svg?branch=develop)](https://travis-ci.org/andela/devrepublic-bn-frontend)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e49336392bf2cfbd9301/maintainability)](https://codeclimate.com/github/andela/devrepublic-bn-frontend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e49336392bf2cfbd9301/test_coverage)](https://codeclimate.com/github/andela/devrepublic-bn-frontend/test_coverage) [![CircleCI](https://circleci.com/gh/andela/devrepublic-bn-frontend.svg?style=svg)](https://circleci.com/gh/andela/devrepublic-bn-frontend) [![Build Status](https://travis-ci.org/andela/devrepublic-bn-frontend.svg?branch=develop)](https://travis-ci.org/andela/devrepublic-bn-frontend)
 
 Make company global travel and accommodation easy and convenient for the strong workforce of savvy members of staff, by leveraging the modern web.
 ## Getting Started
@@ -17,12 +16,18 @@ cd devrepublic-bn-frontend
 Next install the package dependencies by running
 
 ```bash
-npm install
+  npm install
 ```
 After that start  the development application by running
 
 ```bash
   npm start:dev
+```
+
+You can also run the application tests by running
+
+```bash
+  npm test
 ```
 ## Contributors
 - Ishimwe Serge Izzeddin
