@@ -40,7 +40,7 @@ describe('Login functionalities', () => {
     });
     const { loginAction } = wrapper.instance().props;
     loginAction.mockReturnValueOnce({ payload: { status: 200, isVerified: true } });
-    const form = wrapper.find('.signup-form').first();
+    const form = wrapper.find('.login').first();
     const event = { preventDefault: jest.fn() };
     form.simulate('submit', event);
     wrapper.find('.testInput').first().simulate('change', { target: { value: 'aime@as.dc' } });
