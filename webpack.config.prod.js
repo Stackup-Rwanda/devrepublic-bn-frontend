@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: './',
+    publicPath: '/',
     filename: 'bundle.js',
   },
   plugins: [new MiniCssExtractPlugin({

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "start": "npm run build && NODE_ENV=production babel-node server",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
     "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
@@ -14,16 +15,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andela/devrepublic-bn-frontend.git"
+    "url": "git+https://github.com/Stackup-Rwanda/devrepublic-bn-frontend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andela/devrepublic-bn-frontend/issues"
+    "url": "https://github.com/Stackup-Rwanda/devrepublic-bn-frontend/issues"
   },
-  "homepage": "https://github.com/andela/devrepublic-bn-frontend#readme",
+  "homepage": "https://github.com/Stackup-Rwanda/devrepublic-bn-frontend#readme",
   "dependencies": {
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-node": "0.0.1-security",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "jest": "^25.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -32,14 +41,12 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-links": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/react": "^5.3.18"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
