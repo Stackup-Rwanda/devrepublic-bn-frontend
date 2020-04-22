@@ -1,9 +1,7 @@
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
-import { mount } from 'enzyme';
 import { render } from '../components/authentication/loginDefaultProps';
-import { Login as LoginPage } from '../components/authentication/Login';
 
 describe('Login functionalities', () => {
   it('test handlePassword and handleEmail function with valid credential', async () => {

@@ -7,5 +7,8 @@ rrd.BrowserRouter = ({ children }) => <div>{children}</div>;
 module.exports = rrd;
 
 rrd.BrowserRouter.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };

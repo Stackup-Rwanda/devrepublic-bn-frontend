@@ -2,20 +2,18 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import reduxStore from '../store';
-import Login, { Login as LoginPage } from '../components/authentication/Login';
+import Login from '../components/authentication/Login';
 import { defaultProps, render as shallowRender } from '../components/authentication/loginDefaultProps';
 
 describe('Login snapshot', () => {
-  const render = (fn = mount) => {
-    return fn(
-      <Provider store={reduxStore}>
-        <Login {...defaultProps} />
-      </Provider>,
-    );
-  };
+  const render = (fn = mount) => fn(
+    <Provider store={reduxStore}>
+      <Login {...defaultProps} />
+    </Provider>,
+  );
   it('should create a snapshot', () => {
     expect(toJson(render)).toMatchSnapshot();
   });

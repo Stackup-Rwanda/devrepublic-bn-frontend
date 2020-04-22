@@ -20,8 +20,8 @@ export class App extends Component {
     const { language } = this.props;
     return (
       <IntlProvider defaultLocale="en" locale={language.language} messages={data[language.language]}>
-        <ToastContainer />
         <BrowserRouter>
+          <ToastContainer />
           <Routes />
         </BrowserRouter>
       </IntlProvider>

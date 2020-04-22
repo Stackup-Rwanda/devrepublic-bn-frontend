@@ -10,13 +10,16 @@ import { toast } from 'react-toastify';
 import {
   Container, Form, Col, Button, Image, Row,
 } from 'react-bootstrap';
+import translate from '../languages/Translate';
 import { signupAction } from '../../redux/actions/signupAction';
 import '../../scss/signup.scss';
+import NavBarComponent from '../sharedComponents/NavbarComponent';
+import Footer from '../sharedComponents/Footer';
 import BackgroundImage from '../../assets/backg.jpg';
 import FormItem from './FormItem';
 
 
-const Signup = (props) => {
+export const Signup = (props) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -58,13 +61,11 @@ const Signup = (props) => {
     setLogin(!isLoggedIn);
     setloading(true);
     const output = await props.signupAction(data);
-    setloading(false);
+    console.log(output);
 
     if (output.payload.status === 201) {
       props.history.push('/');
-    }
-
-    if (output.type === 'SIGNUP_ERROR') {
+    } else {
       setloading(false);
       const errors = typeof output.payload.error === 'object' ? output.payload.error : [output.payload.error];
 
@@ -77,9 +78,10 @@ const Signup = (props) => {
 
   return (
     <div className="signup-page">
+      <NavBarComponent />
       <Container fluid>
         <Row>
-          <Col xs="12" sm="12" md="12" lg="7  ">
+          <Col xs="12" sm="12" md="12" lg="8">
             <Image className="image" src={BackgroundImage} />
             <div className="text">Welcome to Barefoot Nomad</div>
           </Col>
@@ -87,7 +89,7 @@ const Signup = (props) => {
             <Form onSubmit={handleSubmit} className="signup-form">
               <Form.Label>
                 <h2>
-                  Create an Account
+                  {translate('Create an Account')}
                 </h2>
               </Form.Label>
               <Form.Row>
@@ -130,6 +132,7 @@ const Signup = (props) => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </div>
   );
 };

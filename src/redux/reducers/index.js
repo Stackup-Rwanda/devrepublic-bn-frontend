@@ -5,6 +5,6 @@ import signupReducer from './signupReducer';
 
 export default combineReducers({
   user: authReducer,
-  language: langReducer,
   signupReducer,
+  language: langReducer,
 });
