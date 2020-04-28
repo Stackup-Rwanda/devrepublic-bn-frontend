@@ -24,8 +24,15 @@
   },
   "homepage": "https://github.com/andela/devrepublic-bn-frontend#readme",
   "dependencies": {
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
     "jest": "^25.3.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
@@ -33,10 +40,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-links": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/react": "^5.3.18"
+    "thunk": "0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
