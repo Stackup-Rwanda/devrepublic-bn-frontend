@@ -7,7 +7,8 @@
     "test": "jest",
     "start": "npm run build && NODE_ENV=production babel-node server",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors",
+    "clearCache": "jest --clearCache",
+    "test:coverage": "jest --coverage --colors --updateSnapshot",
     "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
     "build": "webpack --config webpack.config.prod.js",
     "storybook": "start-storybook -p 6006",
@@ -51,6 +52,7 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
