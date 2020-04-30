@@ -11,12 +11,11 @@ import { injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { loginAction } from '../../redux/actions/login';
 import BackgroundImage from '../../assets/backg.jpg';
-import fbImage from '../../assets/f.png';
-import gogleImage from '../../assets/g.png';
 import ErrorAlert from '../sharedComponents/Alert';
 import NavBarComponent from '../sharedComponents/NavbarComponent';
 import Footer from '../sharedComponents/Footer';
 import '../../scss/login.scss';
+import SocialLogin from './SocialLogin';
 import translate from '../languages/Translate';
 
 class Login extends Component {
@@ -143,8 +142,10 @@ class Login extends Component {
                      <Form.Label>
                        <p className="forget-password">{translate('Forgot password?')}</p>
                        <p className="social-login orUse">{translate('Or Use')}</p>
-                       <Image className="social-login logo1" src={gogleImage} />
-                       <Image className="social-login" src={fbImage} />
+                       <div className="social-links">
+                         <SocialLogin name="google" />
+                         <SocialLogin name="facebook" />
+                       </div>
                      </Form.Label>
                    </div>
                  </Form>

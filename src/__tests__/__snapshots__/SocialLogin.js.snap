@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`social login componet renders correctly 1`] = `
+<SocialLogin
+  name="google"
+/>
+`;

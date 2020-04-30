@@ -1,8 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
+const dotenv = require('dotenv');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+dotenv.config();
 process.env.NODE_ENV = 'production';
 
 module.exports = {
@@ -21,6 +23,7 @@ module.exports = {
 
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.BACKEND_LINK': JSON.stringify(process.env.BACKEND_LINK),
   }),
   new HtmlWebpackPlugin({
     template: 'src/index.html',
@@ -43,14 +46,13 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader',
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jp(e*)g|svg|gif)$/,
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]',
+            },
           },
         ],
       },
