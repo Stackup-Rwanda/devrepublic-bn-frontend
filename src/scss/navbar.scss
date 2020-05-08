@@ -39,3 +39,12 @@
     }
 }
 
+.lang-item:hover{
+  background-color: $secondary-color!important;
+  color: $primary-color!important;
+}
+.lang-item{
+  background-color:  $primary-color!important;
+  color: $secondary-color!important;
+  
+}

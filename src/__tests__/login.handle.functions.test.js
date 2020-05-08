@@ -1,22 +1,9 @@
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
-import { mount } from 'enzyme';
-import Login, { Login as LoginPage } from '../components/authentication/Login';
+import { render } from '../components/authentication/loginDefaultProps';
 
 describe('Login functionalities', () => {
-  const render = (params, fn = mount) => {
-    const defaultProps = {
-      history: {},
-      user: {},
-      push: jest.fn(),
-      loginAction: jest.fn(),
-    };
-    const props = { ...defaultProps, ...params };
-    return fn(
-      <LoginPage {...props} />,
-    );
-  };
   it('test handlePassword and handleEmail function with valid credential', async () => {
     const wrapper = render();
     wrapper.setState({
@@ -72,18 +59,6 @@ describe('Login functionalities', () => {
   });
 });
 describe('ERROR RESPONSE CAN NOT LOGIN', () => {
-  const render = (params, fn = mount) => {
-    const defaultProps = {
-      history: {},
-      user: {},
-      push: jest.fn(),
-      loginAction: jest.fn(),
-    };
-    const props = { ...defaultProps, ...params };
-    return fn(
-      <LoginPage {...props} />,
-    );
-  };
   it('payload.status === 401', async () => {
     const wrapper = render();
     wrapper.setState({

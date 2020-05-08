@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import {
   Container, Form, Col, Button, Image, Row,
 } from 'react-bootstrap';
+import { injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { loginAction } from '../../redux/actions/login';
 import BackgroundImage from '../../assets/backg.jpg';
@@ -16,6 +17,7 @@ import ErrorAlert from '../sharedComponents/Alert';
 import NavBarComponent from '../sharedComponents/NavbarComponent';
 import Footer from '../sharedComponents/Footer';
 import '../../scss/login.scss';
+import translate from '../languages/Translate';
 
 class Login extends Component {
   constructor(props) {
@@ -24,7 +26,6 @@ class Login extends Component {
       email: '',
       password: '',
       loading: false,
-      invalidPasswordFeedback: '',
       invalidEmailFeedback: '',
       emailIsValid: false,
       passwordIsValid: false,
@@ -43,7 +44,7 @@ class Login extends Component {
     const emailValidation = emailRegex.test(evt.target.value);
     const { passwordIsValid } = this.state;
     if (!emailValidation) {
-      return this.setState({ invalidEmailFeedback: 'Email must be valid', disableBtn: true });
+      return this.setState({ invalidEmailFeedback: translate('Email must be valid'), disableBtn: true });
     }
     this.setState({ invalidEmailFeedback: '' });
     this.setState({ emailIsValid: true });
@@ -59,9 +60,8 @@ class Login extends Component {
     const passwordRegex = /^((?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W).{8,30})$/;
     const passValidation = passwordRegex.test(evt.target.value);
     if (!passValidation) {
-      return this.setState({ invalidPasswordFeedback: 'Minimum 8 characters, a special character, number, lower and upper case letters', disableBtn: true });
+      return this.setState({ disableBtn: true });
     }
-    this.setState({ invalidPasswordFeedback: '' });
     this.setState({ passwordIsValid: true });
     this.setState({ disableBtn: false });
     if (emailIsValid && passwordIsValid) {
@@ -88,10 +88,11 @@ class Login extends Component {
 
    render() {
      const {
-       loading, emailIsValid, invalidEmailFeedback, passwordIsValid, invalidPasswordFeedback, disableBtn, errorMessage, visible, textColor, removeHover,
+       loading, emailIsValid, invalidEmailFeedback, disableBtn, errorMessage, visible, textColor, removeHover,
      } = this.state;
-     const LOGIN = 'LOGIN';
-     const pleaseWait = 'Please wait...';
+     const { intl } = this.props;
+     const LOGIN = translate('LOGIN');
+     const pleaseWait = translate('Please wait...');
      return (
        <>
          <NavBarComponent />
@@ -100,14 +101,14 @@ class Login extends Component {
              <Row>
                <Col xs="12" sm="12" md="12" lg="7">
                  <Image className="image" src={BackgroundImage} />
-                 <div className="welcome-text">Welcome to Barefoot Nomad</div>
+                 <div className="welcome-text">{translate('Welcome to Barefoot Nomad')}</div>
                </Col>
                <Col xs="12" sm="12" md="12" lg="4">
                  <Form validated={false} onSubmit={this.handleSubmit} className="signup-form">
                    <Form.Label>
                      <ErrorAlert message={errorMessage} visible={visible} textColor={textColor} className="validation-error" />
                      <h2 className="login-title">
-                       LOGIN
+                       { translate('LOGIN') }
                      </h2>
                    </Form.Label>
                    <Form.Group controlId="validationCustom03" className="login-form">
@@ -127,11 +128,10 @@ class Login extends Component {
                          className="signup-form_field testInput1"
                          type="password"
                          value={this.state.password}
-                         placeholder="Password"
+                         placeholder={intl.formatMessage({ id: 'Password', values: 'Password' })}
                          onChange={(e) => this.handlePassword(e)}
                          required
                        />
-                       <div className="text-danger validation-error"><small>{ passwordIsValid ? '' : invalidPasswordFeedback }</small></div>
                      </Form.Group>
                    </Form.Group>
                    <Button type="submit" className={`${removeHover} signup-form_btn`} disabled={disableBtn}>
@@ -141,8 +141,8 @@ class Login extends Component {
                    </Button>
                    <div className="lower-part">
                      <Form.Label>
-                       <p className="forget-password">Forgot password?</p>
-                       <p className="social-login orUse">Or Use</p>
+                       <p className="forget-password">{translate('Forgot password?')}</p>
+                       <p className="social-login orUse">{translate('Or Use')}</p>
                        <Image className="social-login logo1" src={gogleImage} />
                        <Image className="social-login" src={fbImage} />
                      </Form.Label>
@@ -161,10 +161,11 @@ const MapStateToProps = ({ user }) => ({
   user,
 });
 export { Login };
-export default connect(MapStateToProps, { loginAction })(Login);
+export default injectIntl(connect(MapStateToProps, { loginAction })(Login));
 
 Login.propTypes = {
   loginAction: PropTypes.func.isRequired,
-  push: PropTypes.func.isRequired,
+  push: PropTypes.func,
   history: PropTypes.object.isRequired,
+  intl: PropTypes.object,
 };
