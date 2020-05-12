@@ -1,9 +1,6 @@
 import { combineReducers } from 'redux';
-import testReducer from './test-redux';
+import authReducer from './auth';
 
 export default combineReducers({
-  test: testReducer,
+  user: authReducer,
 });
-
-// user: authReducer,
-// import authReducer from './authReducer';

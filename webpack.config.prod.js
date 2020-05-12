@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: './',
+    publicPath: '/',
     filename: 'bundle.js',
   },
   plugins: [new MiniCssExtractPlugin({
@@ -41,6 +41,18 @@ module.exports = {
       {
         test: /(\.scss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },

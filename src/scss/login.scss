@@ -1,0 +1,94 @@
+@import './_variables';
+@import '~bootstrap/scss/bootstrap';
+@import './_config';
+.signup-page {
+  margin-top: 3.8rem;
+  margin-bottom: 90px;
+}
+
+.signup-form {
+  padding-top: 3rem;
+  #{&}_field {
+    border-color: $primary-color;
+    margin-top: 0.1rem;
+    margin-left: 6rem;
+    border-radius: 0;
+    background-color: red($color: #c10000);
+    width: 24rem;
+  }
+
+  #{&}_btn {
+    background-color: $primary-color;
+    border-radius: 0;
+    border-color: $primary-color;
+    font-size: $normal-text;
+    padding: 0.5rem 0.5rem;
+    margin-left: 7rem;
+    width: 24rem;
+    &:not(.removeHover):hover {
+      background-color: $secondary-color!important ;
+      border-color: $secondary-color!important;
+    }
+  }
+}
+.login-title{
+  margin-left: 7rem;
+}
+.forget-password {
+    margin-left: 7rem;
+    margin-top: 1rem;
+}
+.signup-form_btn[disabled] {
+    background-color: $primary-color!important ;
+    border-color: $primary-color!important;
+} 
+
+.validation-error{
+    margin-left: 6rem;
+}
+.alert-error{
+    margin-left: 7rem;
+}
+.social-login{
+  width: 4rem;
+  margin-top: 1rem;
+}
+.logo1 {
+  margin-left: 15rem;
+}
+.orUse {
+  margin-left: 17rem;
+}
+
+.welcome-text {
+  position: absolute;
+  bottom: 100px;
+  left: 16px;
+  font-size: 70px;
+  color: white;
+}
+.login-form {
+  margin-left: 20px;
+}
+.image {
+  @include desktop {
+    margin-top: -0.3rem;
+    margin-bottom: -2rem!important;
+    margin-left: -1rem;
+    margin-right: -34rem;
+    width: 53rem;
+    height: 42.5rem;
+    opacity: 0.9;
+  }
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.forget-password {
+  color: $primary-color;
+  font-weight: 500;
+  &:hover{
+    color: #000000;
+  }
+}
