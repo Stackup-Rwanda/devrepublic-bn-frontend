@@ -2,19 +2,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import reduxStore from '../store';
 import Login, { Login as LoginPage } from '../components/authentication/Login';
+import { defaultProps, render as shallowRender } from '../components/authentication/loginDefaultProps';
 
 describe('Login snapshot', () => {
   const render = (fn = mount) => {
-    const defaultProps = {
-      history: {},
-      user: {},
-      push: jest.fn(),
-      loginAction: jest.fn(),
-    };
     return fn(
       <Provider store={reduxStore}>
         <Login {...defaultProps} />
@@ -28,20 +23,8 @@ describe('Login snapshot', () => {
 
 
 describe('Login functionalities', () => {
-  const render = (params, fn = mount) => {
-    const defaultProps = {
-      history: {},
-      user: {},
-      push: jest.fn(),
-      loginAction: jest.fn(),
-    };
-    const props = { ...defaultProps, ...params };
-    return fn(
-      <LoginPage {...props} />,
-    );
-  };
   it('should submit a form with all info', async () => {
-    const wrapper = render();
+    const wrapper = shallowRender();
     wrapper.setState({
       email: 'email@wd.defs',
       password: '1278',
@@ -65,7 +48,7 @@ describe('Login functionalities', () => {
     wrapper.setProps({ history: { push: jest.fn() } });
   });
   it('renser email and password error messages when credential are not valid', () => {
-    const wrapper = render();
+    const wrapper = shallowRender();
     wrapper.find('.testInput').first().simulate('change', { target: { value: 'aime@as.dc' } });
 
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

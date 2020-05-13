@@ -2,10 +2,11 @@ import React from 'react';
 import { Alert } from 'reactstrap';
 import PropTypes from 'prop-types';
 import '../../scss/login.scss';
+import translate from '../languages/Translate';
 
 const ErrorAlert = ({ message, visible, textColor }) => (
   <Alert color="info" className={`text-${textColor} alert-error`} isOpen={visible}>
-    {message}
+    {translate(message) }
   </Alert>
 );
 ErrorAlert.propTypes = {
