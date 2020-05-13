@@ -12,7 +12,6 @@
     "Or Use": "Or Use",
     "Copyright 2020 devrepublic team. All rights reserved.": "Copyright 2020 devrepublic team. All rights reserved.",
     "Create an Account": "Create an Account",
-    "HOME": "Home",
     "First name": "First name",
     "Currency": "Currency",
     "upload": "upload",
@@ -57,5 +56,11 @@
     "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters": "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters",
     "password reset successfully": "password reset successfully",
     "check your email to reset your password": "check your email to reset your password",
-    "user not found on reset": "user not found, check your input for any mistake"
+    "user not found on reset": "user not found, check your input for any mistake",
+    "all notification already seen": "all notification already seen",
+    "mark all as read": "mark all as read",
+    "view less": "view less",
+    "view more": "view more",
+    "HOME": "Home"
+
 }

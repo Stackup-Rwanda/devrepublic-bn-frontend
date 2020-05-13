@@ -29,7 +29,7 @@ class SideBar extends Component {
       left: slide ? '194px' : '2px',
     };
     return (
-      <div className="wrapper">
+      <div className="sidebar-wrapper">
         <div className="sidebar" style={style}>
           <Route>
             {this.props.children}

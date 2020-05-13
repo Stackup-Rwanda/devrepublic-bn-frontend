@@ -151,7 +151,7 @@ export class Profile extends Component {
           </div>
         </SideBar>
         <NavBar />
-        <Container fluid="lg">
+        <Container fluid="lg" className="profile-container">
           <Row>
             <Col md={5} className="d-flex flex-column align-items-center profile-column">
               <p id="first-paragraph">
@@ -240,6 +240,6 @@ Profile.defaultProps = {
 };
 const mapStateToProps = ({ profile, user }) => ({
   profile,
-  token: user.token || null,
+  token: user.user || null,
 });
 export default injectIntl(connect(mapStateToProps)(Profile));

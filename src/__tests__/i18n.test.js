@@ -1,4 +1,3 @@
-import * as React from 'react';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import { SELECT_LANGUAGE } from '../redux/actions/actionsTypes';

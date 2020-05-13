@@ -45,7 +45,7 @@ const forgotPassword = (props) => {
       <NavBarComponent />
       <Container fluid="lg">
         <div className="content">
-          <div className="container p-5 justify-content-md-center">
+          <div className="container password-container p-5 justify-content-md-center">
             <form onSubmit={handleSubmit} className={validationClassName}>
               <div className="form-group justify-content-center align-items-center">
                 <h1>

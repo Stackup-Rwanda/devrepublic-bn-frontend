@@ -12,7 +12,6 @@
     "Or Use": "Ou utiliser",
     "Copyright 2020 devrepublic team. All rights reserved.": "Copyright 2020 devrepublic team. Tous les droits sont réservés.",
     "Create an Account": "créer un compte",
-    "HOME": "Maison",
     "First name": "Prénom",
     "Currency": "Devise",
     "upload": "télécharger",
@@ -57,5 +56,10 @@
     "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters": "Utilisez un mot de passe d'au moins 8 caractères: majuscules, minuscules, chiffres et caractères spéciaux",
     "user not found on reset": "utilisateur non trouvé, vérifiez votre saisie pour toute erreur",
     "check your email to reset your password": "vérifiez votre e-mail pour réinitialiser votre mot de passe",
-    "password reset successfully": "réinitialisation du mot de passe réussie"
+    "password reset successfully": "réinitialisation du mot de passe réussie",
+    "all notification already seen": "toute notification déjà vue",
+    "mark all as read": "lis tout",
+    "view less": "voir moins",
+    "view more": "Voir plus",
+    "HOME": "Accueil"
 }

@@ -7,7 +7,7 @@ import { AuthNavBar } from '../components/sharedComponents/AuthNavBar';
 describe('<AuthNavBar />', () => {
   const wrapper = mount(
     <IntlProvider defaultLocale="en" locale="en" messages={translation}>
-      <AuthNavBar intl={{ formatMessage: jest.fn() }} language={{ language: 'en', image: 'fffefefeefeff.vre/' }} selectLanguage={jest.fn(() => ({ payload: 'fr' }))} />
+      <AuthNavBar intl={{ formatMessage: jest.fn() }} language={{ language: 'en', image: 'fffefefeefeff.vre/' }} token="dwedwdwdwed" selectLanguage={jest.fn(() => ({ payload: 'fr' }))} />
     </IntlProvider>,
   );
   it('test set language button', () => {
