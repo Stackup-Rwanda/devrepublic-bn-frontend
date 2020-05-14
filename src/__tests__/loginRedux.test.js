@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable prefer-promise-reject-errors */
 import * as React from 'react';
 import thunk from 'redux-thunk';

@@ -44,5 +44,18 @@
     "Receive email notification": "Receive email notification",
     "Department": "Department",
     "close": "close",
-    "open": "open"
+    "open": "open",
+    "Forgot your password": "Forgot your password",
+    "Reset your password": "Reset your password",
+    "Enter email": "Enter email",
+    "Enter a valid email": "Enter a valid email",
+    "Loading...": "Loading...",
+    "Send email": "Send email",
+    "RESET": "RESET",
+    "Sign Up": "Sign Up",
+    "New Password": "New Password",
+    "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters": "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters",
+    "password reset successfully": "password reset successfully",
+    "check your email to reset your password": "check your email to reset your password",
+    "user not found on reset": "user not found, check your input for any mistake"
 }

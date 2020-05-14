@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Provider } from 'react-redux';

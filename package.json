@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --updateSnapshot",
     "start": "npm run build && NODE_ENV=production babel-node server",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors",
+    "clearCache": "jest --clearCache",
+    "test:coverage": "jest --coverage --colors --updateSnapshot",
     "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
     "build": "webpack --config webpack.config.prod.js",
     "storybook": "start-storybook -p 6006",

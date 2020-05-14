@@ -1,5 +1,4 @@
 /* eslint-disable consistent-return */
-/* eslint-disable import/prefer-default-export */
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { LOGIN_ERROR, LOGIN_SUCCESS } from './actionsTypes';
