@@ -51,7 +51,7 @@ describe('Login functionalities', () => {
       errorMessage: 'Welcome! Verify your account first.',
       textColor: 'dark',
     });
-    const form = wrapper.find('.signup-form').first();
+    const form = wrapper.find('.login').first();
     const event = { preventDefault: jest.fn() };
     form.simulate('submit', event);
     wrapper.find('.testInput').first().simulate('change', { target: { value: 'example@jk.io' } });
@@ -75,7 +75,7 @@ describe('ERROR RESPONSE CAN NOT LOGIN', () => {
       errorMessage: 'Welcome! Verify your account first.',
       textColor: 'dark',
     });
-    const form = wrapper.find('.signup-form').first();
+    const form = wrapper.find('.login').first();
     const event = { preventDefault: jest.fn() };
     form.simulate('submit', event);
     wrapper.find('.testInput').first().simulate('change', { target: { value: 'aime@as.dc' } });

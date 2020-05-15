@@ -6,7 +6,7 @@
   margin-bottom: 90px;
 }
 
-.signup-form {
+.login {
   padding-top: 3rem;
   #{&}_field {
     border-color: $primary-color;
@@ -18,7 +18,7 @@
   }
 
   #{&}_btn {
-    background-color: $primary-color;
+    background-color: $primary-color !important;
     border-radius: 0;
     border-color: $primary-color;
     font-size: $normal-text;

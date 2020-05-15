@@ -1,0 +1,64 @@
+@import './_variables';
+@import '~bootstrap/scss/bootstrap';
+@import './_config';
+
+.signup-page {
+  margin-top: 3.8rem;
+  margin-bottom: 4rem;
+  // overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 80px;
+  color: white;
+}
+
+.image {
+  @include desktop {
+    margin-top: -0.3rem;
+    margin-left: -1rem;
+    margin-right: -34rem;
+    width: 53rem;
+    height: 42.5rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+  }
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.signup-form {
+  padding-top: 6rem;
+  margin-left: 4rem;
+  #{&}_field {
+    border-color: $primary-color;
+    margin-top: 0.5rem;
+    border-radius: 0;
+    padding: 1.3rem 1rem;
+  }
+
+  #{&}_btn {
+    background-color: $primary-color;
+    border-radius: 0;
+    border-color: $primary-color;
+    font-size: $normal-text;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    // width: 28.1rem;
+    &:hover {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+}
+
+.feedback-message {
+  color: red;
+  font-size: 12px;
+  margin-top: -0.8rem;
+}
+

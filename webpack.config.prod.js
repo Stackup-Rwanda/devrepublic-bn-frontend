@@ -24,7 +24,7 @@ module.exports = {
   }),
   new HtmlWebpackPlugin({
     template: 'src/index.html',
-    favicon: 'src/bareicon.png',
+    favicon: 'src/assets/favicon.png',
   }),
   ],
   module: {

@@ -104,7 +104,7 @@ class Login extends Component {
                  <div className="welcome-text">{translate('Welcome to Barefoot Nomad')}</div>
                </Col>
                <Col xs="12" sm="12" md="12" lg="4">
-                 <Form validated={false} onSubmit={this.handleSubmit} className="signup-form">
+                 <Form validated={false} onSubmit={this.handleSubmit} className="login">
                    <Form.Label>
                      <ErrorAlert message={errorMessage} visible={visible} textColor={textColor} className="validation-error" />
                      <h2 className="login-title">
@@ -119,13 +119,13 @@ class Login extends Component {
                          value={this.state.email}
                          placeholder="Email"
                          onChange={(e) => this.handleEmail(e)}
-                         className="signup-form_field testInput"
+                         className="login_field testInput"
                          required
                        />
                      </Form.Group>
                      <Form.Group>
                        <Form.Control
-                         className="signup-form_field testInput1"
+                         className="login_field testInput1"
                          type="password"
                          value={this.state.password}
                          placeholder={intl.formatMessage({ id: 'Password', values: 'Password' })}
@@ -134,7 +134,7 @@ class Login extends Component {
                        />
                      </Form.Group>
                    </Form.Group>
-                   <Button type="submit" className={`${removeHover} signup-form_btn`} disabled={disableBtn}>
+                   <Button type="submit" className={`${removeHover} login_btn`} disabled={disableBtn}>
                      {
                       loading ? pleaseWait : LOGIN
                     }
