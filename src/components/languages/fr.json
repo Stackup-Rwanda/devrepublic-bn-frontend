@@ -1,5 +1,6 @@
 {
-    "Register": "registre",
+    "Register": "S'inscrire",
+    "Sign Up": "S'inscrire",
     "Log In": "S'identifier",
     "Please wait...": "S'il vous plaît, attendez",
     "LOGIN": "S'IDENTIFIER",
@@ -51,7 +52,6 @@
     "Loading...": "Chargement...",
     "Send email": "Envoyer un e-mail",
     "RESET": "RÉINITIALISER",
-    "Sign Up": "S'inscrire",
     "New Password": "Nouveau mot de passe",
     "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters": "Utilisez un mot de passe d'au moins 8 caractères: majuscules, minuscules, chiffres et caractères spéciaux",
     "user not found on reset": "utilisateur non trouvé, vérifiez votre saisie pour toute erreur",
@@ -61,5 +61,7 @@
     "mark all as read": "lis tout",
     "view less": "voir moins",
     "view more": "Voir plus",
-    "HOME": "Accueil"
+    "HOME": "Accueil",
+    "Make travel arrangement with us.": "Organisez votre voyage avec nous.",
+    "Have more control on your travel experience.": "Ayez plus de contrôle sur votre expérience de voyage."
 }

@@ -62,7 +62,6 @@ export const Signup = (props) => {
     setLogin(!isLoggedIn);
     setloading(true);
     const output = await props.signupAction(data);
-    console.log(output);
 
     if (output.payload.status === 201) {
       props.history.push('/');

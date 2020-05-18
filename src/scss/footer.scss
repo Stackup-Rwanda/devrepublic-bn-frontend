@@ -1,9 +1,15 @@
 @import './_variables';
+@import './_config';
 
 .footer {
-    background-color: $primary-color;
-    color: #ffffff;
-    #{&}_text {
-        margin: 1rem 1rem;
+    @include desktop {
+        background-color: $primary-color;
+        color: #ffffff;
+        #{&}_text {
+            margin: 1rem 1rem;
+        }
+    }
+    @include mobile-tablet {
+        display: none;
     }
 }
