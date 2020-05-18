@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import jwtDecode from 'jwt-decode';
 import RequesterDashboard from './RequesterDashboard';
 import ManagerDashboard from './ManagerDashboard';
+import AdminDashboard from './admin';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -29,6 +30,8 @@ class Dashboard extends Component {
         return <RequesterDashboard token={token} />;
       case 'manager':
         return <ManagerDashboard token={token} />;
+      case 'super administrator':
+        return <AdminDashboard />;
       default:
         return null;
     }
