@@ -82,7 +82,7 @@ class Login extends Component {
        this.setState({ email: '', password: '' });
        return this.setState({ visible: true, errorMessage: 'Welcome! Verify your account first.', textColor: 'dark' });
      }
-     this.props.history.push('/dashoard');
+     this.props.history.push('/dashboard');
    }
 
    render() {

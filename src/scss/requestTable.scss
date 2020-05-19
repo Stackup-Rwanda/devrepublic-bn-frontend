@@ -1,0 +1,135 @@
+@import './_variables';
+@import '~bootstrap/scss/bootstrap';
+@import './_config';
+
+.whole-conatainer {
+    margin-top: 59px;
+    min-height: calc(100vh - 7rem);
+}
+.col-1 {
+    // background-color: black;
+}
+.col-2 {
+    background-color: $primary-color;
+    height: 83vh; 
+}
+.requester-Dashboard {
+    // background-color: rgb(13, 13, 223);
+}
+.all-icons{
+    // background-color: rgb(111, 223, 13);
+    margin-left: 450px;
+    margin-top: 20px;
+
+}
+.icon{
+height: 30px;
+width: 30px;
+}
+.add-icon{
+    margin-left: 20px;
+}
+.travel-request{
+    padding-top: 10px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    width: 100%;
+    color: $secondary-color;
+}
+.request-dashboard-title{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    color: $primary-color;
+
+}
+.All-travel-Requests-title{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: rgb(174, 174, 174);
+}
+.table-container{
+    margin-top: 40px;
+}
+.status-btn{
+    background-color: rgb(1, 164, 93);
+    color: white;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 10px;
+    width: 95px;
+}
+.rows-container{
+    margin-top: 10px;
+}
+.col-titles{
+    color: $primary-color;
+}
+.table-header{
+    margin-right: 20px;
+}
+.rejectedStatus{
+background-color: rgb(201, 26, 26);
+color: white;
+padding: 5px;
+box-shadow: 1px 1px #a7a7a7
+}
+.openStatus{
+background-color: $secondary-color;
+color: white;
+padding: 5px;
+box-shadow: 1px 1px #a7a7a7
+}
+.approvedStatus{
+background-color: $primary-color;
+color: white;
+padding: 5px;
+box-shadow: 1px 1px #a7a7a7
+}
+
+.col-status{
+width: 20px;
+}
+.selectable{
+    cursor: pointer;
+}
+.trip-details-reason{
+    font-weight: bold;
+    font-size: 14px;
+    color: $primary-color;
+}
+.trip-details{
+    width: 400px;
+}
+.firstName {
+ padding: 1px;
+}
+.lastName{
+padding: 5px;
+}
+.dashboard-view{
+    overflow-y: auto;
+    height: 83vh; 
+
+}
+.dashboard-content{
+    height: 80vh; 
+
+}
+.profile-image{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+.no-requests{
+    color: $primary-color;
+font-size: 20px;
+}
+.spinner-loading{
+    width: 5rem;
+    height: 5rem;
+    color: $primary-color;
+}
+.loadingText{
+    color: $primary-color;
+}
