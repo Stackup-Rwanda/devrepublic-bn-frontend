@@ -15,12 +15,15 @@ import {
 }
   from './sharedFuncs';
 import translate from '../languages/Translate';
+import pagination from '../../util/pagination';
+import MainHeader from './MainHeader';
 
 class RequesterDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       requests: [],
+      displayedRequests: [],
       bookings: [],
       loading: true,
     };
@@ -34,6 +37,7 @@ class RequesterDashboard extends Component {
       bookings: actionOutput.payload.data.bookings,
       loading: false,
     });
+    this.setState((prevState) => ({ displayedRequests: pagination(prevState.requests, 1) }));
   }
 
   findAccommodation = (request, booking) => {
@@ -49,8 +53,16 @@ class RequesterDashboard extends Component {
     }
   }
 
+  filter = (newArray) => {
+    this.setState({
+      displayedRequests: newArray,
+    });
+  }
+
   render() {
-    const { requests, bookings, loading } = this.state;
+    const {
+      requests, bookings, loading, displayedRequests,
+    } = this.state;
     const requestsLength = requests.length;
     const Accommodation = 'Accommodation';
     const tripDetails = 'Trip Details';
@@ -68,13 +80,9 @@ class RequesterDashboard extends Component {
               <Col lg="10" sm="11" md="9" xs="11" className="col-1">
 
                 <Row>
-                  <Col className="requester-Dashboard">
-                    <div className="request-dashboard-title ">
-                      { translate('Requester Dashboard') }
-                    </div>
-                  </Col>
-                  <Col className="all-icons text-center ">
-                    <div>
+                  <MainHeader allTrips={requests} filter={this.filter} />
+                  <Col sm="12" md="4" lg="4">
+                    <div className="all-icons text-center">
                       <NewAndSearch />
                     </div>
                   </Col>
@@ -95,7 +103,7 @@ class RequesterDashboard extends Component {
                               <div className="dashboard-content">
                                 <Table>
                                   {columnTitles(tripDetails, Accommodation, date, Status)}
-                                  {requests.map((request) => (
+                                  {displayedRequests.map((request) => (
                                     <tbody key={request.id} className="table-header">
                                       <tr className="row-info-container">
                                         {reasonColumnTitle(request)}

@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { Provider } from 'react-redux';
+import io from 'socket.io-client';
 import configureStore from 'redux-mock-store';
 import translation from '../components/languages/en.json';
 import ConnectedProfile from '../components/profile/Profile';
@@ -46,6 +47,14 @@ const testChange = (location, name, result, elementContainer) => {
   const { state } = elementContainer.instance();
   expect(state[name]).toBe(result);
 };
+jest.mock('socket.io-client', () => {
+  const emit = jest.fn();
+  const on = jest.fn(() => [{
+    id: 'fafwefwefwefw', content: 'this is a comment', createdAt: '2019-02-02', status: 'read',
+  }]);
+  const socket = { emit, on, connect: jest.fn() };
+  return jest.fn(() => socket);
+});
 describe('test trial', () => {
   const user = {
     firstName: 'user',
@@ -66,6 +75,9 @@ describe('test trial', () => {
     gender: 'Male',
   };
   beforeEach(() => {
+    io.mockClear();
+    io().on.mockClear();
+    io().emit.mockClear();
     wrapper = mount(
       <IntlProvider defaultLocale="en" locale="en" messages={translation}>
         <MemoryRouter>

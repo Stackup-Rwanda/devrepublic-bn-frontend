@@ -15,12 +15,16 @@ import {
 import NewAndSearch from './NewAndSearch';
 import placeholder from '../../assets/users.png';
 import translate from '../languages/Translate';
+import pagination from '../../util/pagination';
+import MainHeader from './MainHeader';
+
 
 class ManagerDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       requests: [],
+      displayedRequests: [],
       loading: true,
     };
   }
@@ -32,10 +36,17 @@ class ManagerDashboard extends Component {
       requests: actionOutput.payload.data.requests,
       loading: false,
     });
+    this.setState((prevState) => ({ displayedRequests: pagination(prevState.requests, 1) }));
+  }
+
+  filter = (newArray) => {
+    this.setState({
+      displayedRequests: newArray,
+    });
   }
 
   render() {
-    const { requests, loading } = this.state;
+    const { requests, loading, displayedRequests } = this.state;
     const requestsLength = requests.length;
     const Requester = 'Requester';
     const tripDetails = 'Trip Details';
@@ -55,11 +66,7 @@ class ManagerDashboard extends Component {
               <Col lg="10" sm="11" md="9" xs="11" className="col-1">
 
                 <Row>
-                  <Col className="requester-Dashboard">
-                    <div className="request-dashboard-title ">
-                      {translate('Manager Dashboard')}
-                    </div>
-                  </Col>
+                  <MainHeader allTrips={requests} filter={this.filter} />
                   <Col className="all-icons text-center">
                     <NewAndSearch />
                   </Col>
@@ -81,7 +88,7 @@ class ManagerDashboard extends Component {
                                                 <div className="table-header">
                                                   <Table>
                                                     {columnTitles(Requester, tripDetails, date, Status)}
-                                                    {requests.map((request) => (
+                                                    {displayedRequests.map((request) => (
                                                       <tbody key={request.id}>
                                                         <tr className="row-info-container">
                                                           <td className="col-accomodation">

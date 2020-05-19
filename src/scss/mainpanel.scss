@@ -1,0 +1,85 @@
+@import './_variables';
+@import '~bootstrap/scss/bootstrap';
+@import './_config';
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  right: 15px;
+  top: 15px;
+  position: absolute;
+  z-index: -1;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    padding-top: 1%;
+    #{&}_select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      font-size: 1.5rem;
+      width: 22rem;
+      background: transparent;
+      border: 2px solid $primary-color;
+      padding: 2px;
+      border-radius: 0px;
+      z-index: 300;
+    }
+  
+  @include large-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.select-container {
+  position: relative;
+}
+.number {
+  padding-top: 0.5%;
+  padding-right: 10px;
+}
+.page-controller {
+  margin-left: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  @include large-mobile {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+.add_request_btn {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: #ffffff;
+  margin-top: 3rem;
+  align-self: center;
+
+}
+.pagination_item button {
+  border: none;
+}
+.arrows {
+  width: 50px;
+}

@@ -7,8 +7,8 @@
     height: 100vh;
 }
 .all-icons{
-    margin-left: 450px;
-    margin-top: 20px;
+    // margin-left: 450px;
+    margin-top: 30px;
 
 }
 .icon{
@@ -116,4 +116,7 @@ font-size: 20px;
 }
 .loadingText{
     color: $primary-color;
+}
+.whole-conatainer {
+    overflow: hidden;
 }
