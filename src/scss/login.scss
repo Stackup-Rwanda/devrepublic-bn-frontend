@@ -85,3 +85,14 @@
     display: none;
   }
 }
+.social-links {
+  display: flex;
+  margin-top: 4rem;
+  margin-left: 14.5rem;
+}
+.social-links a:last-of-type {
+  margin-left: 20px;  
+    @include mobile-tablet {
+
+    }
+}

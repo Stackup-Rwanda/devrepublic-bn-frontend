@@ -17,6 +17,7 @@ import NavBarComponent from '../sharedComponents/NavbarComponent';
 import Footer from '../sharedComponents/Footer';
 import BackgroundImage from '../../assets/backg.jpg';
 import FormItem from './FormItem';
+import SocialLogin from './SocialLogin';
 
 
 export const Signup = (props) => {
@@ -128,6 +129,16 @@ export const Signup = (props) => {
                   loading ? 'Please wait...' : 'REGISTER'
                 }
               </Button>
+              <Form.Row className="social-login-signup">
+                <div>
+                  <p>{translate('Or Use')}</p>
+                </div>
+
+                <div className="social-links-signup">
+                  <SocialLogin name="google" />
+                  <SocialLogin name="facebook" />
+                </div>
+              </Form.Row>
             </Form>
           </Col>
         </Row>
