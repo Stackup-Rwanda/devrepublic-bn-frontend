@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import {
   Navbar, Nav, Dropdown, DropdownButton, Button,
 } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import '../../scss/navbar.scss';
-import logo from '../../assets/logo.png';
+import '../../scss/authNavbar.scss';
 import selectLanguage from '../../redux/actions/i18n';
 import translate from '../languages/Translate';
+import bell from '../../assets/notificationbell.png';
+import placeholder from '../../assets/users.png';
+import logo from '../../assets/logo.png';
 
-class NavBarComponent extends Component {
+export class AuthNavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: this.props.language.language,
+      language: props.language.language,
     };
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   handleSelect = (evt) => {
@@ -25,6 +29,7 @@ class NavBarComponent extends Component {
 
   render() {
     const { language } = this.state;
+    const { image } = this.props;
     return (
       <Navbar fixed="top" expand="lg" className="nav-bar">
         <Navbar.Brand href="#home">
@@ -40,18 +45,17 @@ class NavBarComponent extends Component {
         <Navbar.Collapse id="responsive-navbar-nav" bsPrefix="navbar-collapse">
           <Nav className="mr-auto" />
           <Nav>
-            <Nav.Link href="/login" className="nav-bar_item">
-              {
-                  translate('Log In')
-                }
-            </Nav.Link>
             <Button className="nav-bar_btn">
+              {' '}
               {
-                   translate('Register')
-                 }
+                  translate('HOME')
+                }
             </Button>
-
-            <DropdownButton className="test" title={language} onSelect={this.handleSelect} alignRight variant="inherit" bsPrefix="nav-bar_dropdown">
+            <Nav.Link>
+              <img src={bell} alt="bell" className="notification-bell" />
+            </Nav.Link>
+            <img src={image || placeholder} alt="profile" className="nav-profile-img" />
+            <DropdownButton title={language} alignRight variant="inherit" onSelect={this.handleSelect} className="select-lang" bsPrefix="nav-bar_dropdown">
               <Dropdown.Item className="lang-item" href="#en">ENGLISH</Dropdown.Item>
               <Dropdown.Item className="lang-item" href="#fr">FRANCAIS</Dropdown.Item>
             </DropdownButton>
@@ -61,14 +65,14 @@ class NavBarComponent extends Component {
     );
   }
 }
-const MapStateToProps = ({ language }) => ({
-  language,
-});
-export default connect(MapStateToProps, { selectLanguage })(NavBarComponent);
-export { NavBarComponent };
 
-NavBarComponent.propTypes = {
+AuthNavBar.propTypes = {
   language: PropTypes.object,
-  selectLanguage: PropTypes.func,
-
+  selectLanguage: PropTypes.func.isRequired,
+  image: PropTypes.string,
 };
+const MapStateToProps = ({ language, profile }) => ({
+  language,
+  image: profile.image,
+});
+export default connect(MapStateToProps, { selectLanguage })(AuthNavBar);

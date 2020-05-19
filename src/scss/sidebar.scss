@@ -1,0 +1,52 @@
+@import './__variables';
+@import './_config';
+.wrapper {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  padding: 0 !important;
+  z-index: 20;
+  width: fit-content !important;
+  height: calc(100vh - 6.6rem);
+
+}
+.wrapper button {
+  background-color: $secondary_color;
+  height: fit-content;
+  width: 80px;
+  margin-left: -27px;
+  transform:rotate(-90deg);
+  display: block;
+  justify-self: start;
+  align-self: center;
+  z-index: 10;
+  float: left;
+  position: fixed;
+  top: 55%;
+}
+.wrapper .sidebar {
+  display: none;
+  height: inherit;
+  width: 190px;
+  background-color: $primary_color;
+  float: left;
+}
+.wrapper .sidebar .nav-item {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: white;
+  vertical-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: white solid 1px;
+  border-bottom: white solid 1px;
+  padding-left: 45px;
+}
+.wrapper .sidebar .nav-item a {
+  color: white;
+}
+.wrapper .sidebar .same-page a {
+  color: $secondary_color;
+}
+
