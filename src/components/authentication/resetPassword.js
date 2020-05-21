@@ -46,7 +46,7 @@ const resetPassword = (props) => {
       <NavBarComponent />
       <Container fluid="lg">
         <div className="content">
-          <div className="container p-5 justify-content-md-center">
+          <div className="container password-container p-5 justify-content-md-center">
             <form
               className={validationClassName}
               onSubmit={handleSubmit}

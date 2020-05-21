@@ -7,6 +7,7 @@ import Signup from '../components/authentication/Signup';
 import ProfileComponent from '../components/profile/Profile';
 import ResetPassword from '../components/authentication/resetPassword';
 import ForgotPassword from '../components/authentication/forgotPassword';
+import Dashboard from '../components/Dashboard';
 
 const Routes = () => (
   <Switch>
@@ -16,6 +17,7 @@ const Routes = () => (
     <Route exact path="/profile" component={ProfileComponent} />
     <Route exact path="/password/reset" component={ResetPassword} />
     <Route exact path="/password/forgot" component={ForgotPassword} />
+    <Route exact path="/dashboard" component={Dashboard} />
     <Route component={NotFound} />
   </Switch>
 );

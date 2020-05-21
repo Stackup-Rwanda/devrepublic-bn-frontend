@@ -8,8 +8,8 @@ import '../../scss/navbar.scss';
 import '../../scss/authNavbar.scss';
 import selectLanguage from '../../redux/actions/i18n';
 import translate from '../languages/Translate';
-import bell from '../../assets/notificationbell.png';
 import placeholder from '../../assets/users.png';
+import Notification from '../notification/Notifcation';
 import logo from '../../assets/logo.png';
 
 export class AuthNavBar extends Component {
@@ -29,7 +29,7 @@ export class AuthNavBar extends Component {
 
   render() {
     const { language } = this.state;
-    const { image } = this.props;
+    const { image, token } = this.props;
     return (
       <Navbar fixed="top" expand="lg" className="nav-bar">
         <Navbar.Brand href="#home">
@@ -52,7 +52,7 @@ export class AuthNavBar extends Component {
                 }
             </Button>
             <Nav.Link>
-              <img src={bell} alt="bell" className="notification-bell" />
+              <Notification token={token} />
             </Nav.Link>
             <img src={image || placeholder} alt="profile" className="nav-profile-img" />
             <DropdownButton title={language} alignRight variant="inherit" onSelect={this.handleSelect} className="select-lang" bsPrefix="nav-bar_dropdown">
@@ -70,9 +70,20 @@ AuthNavBar.propTypes = {
   language: PropTypes.object,
   selectLanguage: PropTypes.func.isRequired,
   image: PropTypes.string,
+  token: PropTypes.string,
 };
-const MapStateToProps = ({ language, profile }) => ({
-  language,
-  image: profile.image,
-});
+const MapStateToProps = ({ language, user, profile }) => {
+  if (user.user) {
+    return {
+      language,
+      token: localStorage.getItem('token') || user.user.data,
+      image: profile.image,
+    };
+  }
+  return {
+    language,
+    token: '',
+    image: profile.image,
+  };
+};
 export default connect(MapStateToProps, { selectLanguage })(AuthNavBar);

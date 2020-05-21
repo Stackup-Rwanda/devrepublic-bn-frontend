@@ -3,6 +3,7 @@
 
 .nav-bar {
     background-color: $primary-color;
+    position: relative;
 
     #{&}_items {
       background-color: $secondary-color;

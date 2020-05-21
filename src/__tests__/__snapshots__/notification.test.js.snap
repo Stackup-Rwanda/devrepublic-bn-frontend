@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification> render correctly date component 1`] = `
+<div
+  className="notification-wrapper"
+>
+  <button
+    id="bell-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <img
+      alt="bell"
+      className="notification-bell"
+      src="test-file-stub"
+    />
+  </button>
+  <div
+    className="notif-panel container"
+    style={
+      Object {
+        "display": "none ",
+        "height": "280px",
+      }
+    }
+  >
+    <p>
+      Notifications
+      <span
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        all notification already seen
+      </span>
+    </p>
+    <div
+      className="notifications"
+      style={null}
+    />
+    <div
+      className="row notif-buttons"
+    >
+      <button
+        className="col"
+        id="mark-all"
+        onClick={[Function]}
+        type="button"
+      >
+        mark all as read
+      </button>
+      <button
+        className="col"
+        id="view-more"
+        onClick={[Function]}
+        type="button"
+      >
+        view more
+      </button>
+    </div>
+  </div>
+</div>
+`;
