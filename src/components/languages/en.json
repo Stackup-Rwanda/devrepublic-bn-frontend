@@ -1,5 +1,6 @@
 {
     "Register": "Register",
+    "Sign Up": "Sign Up",
     "Log In": "Log In",
     "Please wait...": "Please wait...",
     "LOGIN": "LOGIN",
@@ -51,7 +52,6 @@
     "Loading...": "Loading...",
     "Send email": "Send email",
     "RESET": "RESET",
-    "Sign Up": "Sign Up",
     "New Password": "New Password",
     "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters": "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters",
     "password reset successfully": "password reset successfully",
@@ -61,6 +61,7 @@
     "mark all as read": "mark all as read",
     "view less": "view less",
     "view more": "view more",
-    "HOME": "Home"
-
+    "HOME": "Home",
+    "Make travel arrangement with us.": "Make travel arrangement with us.",
+    "Have more control on your travel experience.": "Have more control on your travel experience."
 }

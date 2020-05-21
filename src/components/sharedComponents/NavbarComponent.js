@@ -45,7 +45,7 @@ class NavBarComponent extends Component {
                   translate('Log In')
                 }
             </Nav.Link>
-            <Button className="nav-bar_btn">
+            <Button href="/signup" className="nav-bar_btn">
               {
                    translate('Register')
                  }
