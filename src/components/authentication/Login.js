@@ -1,7 +1,5 @@
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable max-len */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable consistent-return */
-/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
@@ -105,7 +103,7 @@ class Login extends Component {
                <Col xs="12" sm="12" md="12" lg="4">
                  <Form validated={false} onSubmit={this.handleSubmit} className="login">
                    <Form.Label>
-                     <ErrorAlert message={errorMessage} visible={visible} textColor={textColor} className="validation-error" />
+                     <ErrorAlert message={errorMessage} visible={visible} textColor={textColor} otherClassName="alert-error" />
                      <h2 className="login-title">
                        { translate('LOGIN') }
                      </h2>
@@ -140,7 +138,7 @@ class Login extends Component {
                    </Button>
                    <div className="lower-part">
                      <Form.Label>
-                       <p className="forget-password">{translate('Forgot password?')}</p>
+                       <div className="forget-password" onClick={() => this.props.history.push('/password/forgot')} tabIndex={-42} role="button">Forgot password?</div>
                        <p className="social-login orUse">{translate('Or Use')}</p>
                        <div className="social-links">
                          <SocialLogin name="google" />

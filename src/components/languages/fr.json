@@ -44,5 +44,18 @@
     "Receive email notification": "Recevoir une notification par e-mail",
     "Department": "Département",
     "close": "Fermer",
-    "open": "ouvrir"
+    "open": "ouvrir",
+    "Forgot your password": "Mot de passe oublié",
+    "Reset your password": "Réinitialisez votre mot de passe",
+    "Enter email": "Entrez votre e-mail",
+    "Enter a valid email": "Entrer un email valide",
+    "Loading...": "Chargement...",
+    "Send email": "Envoyer un e-mail",
+    "RESET": "RÉINITIALISER",
+    "Sign Up": "S'inscrire",
+    "New Password": "Nouveau mot de passe",
+    "Use a password of at least 8 characters: uppercase, lowercase letters, numbers and special characters": "Utilisez un mot de passe d'au moins 8 caractères: majuscules, minuscules, chiffres et caractères spéciaux",
+    "user not found on reset": "utilisateur non trouvé, vérifiez votre saisie pour toute erreur",
+    "check your email to reset your password": "vérifiez votre e-mail pour réinitialiser votre mot de passe",
+    "password reset successfully": "réinitialisation du mot de passe réussie"
 }

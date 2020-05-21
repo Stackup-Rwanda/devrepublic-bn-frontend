@@ -95,4 +95,11 @@
     @include mobile-tablet {
 
     }
+  }
+.forget-password {
+  color: $primary-color;
+  font-weight: 500;
+  &:hover{
+    color: #000000;
+  }
 }

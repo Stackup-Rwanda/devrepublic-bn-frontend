@@ -1,6 +1,6 @@
 # Barefoot Nomad
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/87b3b342d9dca9a73afb/maintainability)](https://codeclimate.com/github/Stackup-Rwanda/devrepublic-bn-frontend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/87b3b342d9dca9a73afb/test_coverage)](https://codeclimate.com/github/Stackup-Rwanda/devrepublic-bn-frontend/test_coverage) [![CircleCI](https://circleci.com/gh/andela/devrepublic-bn-frontend.svg?style=svg)](https://circleci.com/gh/andela/devrepublic-bn-frontend) [![Build Status](https://travis-ci.org/Stackup-Rwanda/devrepublic-bn-frontend.svg?branch=develop)](https://travis-ci.org/Stackup-Rwanda/devrepublic-bn-frontend)
+[![Maintainability](https://api.codeclimate.com/v1/badges/87b3b342d9dca9a73afb/maintainability)](https://codeclimate.com/github/Stackup-Rwanda/devrepublic-bn-frontend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/87b3b342d9dca9a73afb/test_coverage)](https://codeclimate.com/github/Stackup-Rwanda/devrepublic-bn-frontend/test_coverage) [![CircleCI](https://circleci.com/gh/Stackup-Rwanda/devrepublic-bn-frontend.svg?style=svg)](https://circleci.com/gh/Stackup-Rwanda/devrepublic-bn-frontend) [![Build Status](https://travis-ci.org/Stackup-Rwanda/devrepublic-bn-frontend.svg?branch=develop)](https://travis-ci.org/Stackup-Rwanda/devrepublic-bn-frontend)
 
 Make company global travel and accommodation easy and convenient for the strong workforce of savvy members of staff, by leveraging the modern web.
 ## Getting Started

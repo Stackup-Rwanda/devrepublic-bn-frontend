@@ -1,5 +1,3 @@
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
