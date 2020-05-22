@@ -17,7 +17,7 @@ class Notification extends Component {
       error: false,
     };
     this.socket = io('https://devrepublic-bn-backend.herokuapp.com', {
-      query: { token: props.token },
+      query: { token: props.token || localStorage.getItem('token') },
     });
     this.readAllNotif = this.readAllNotif.bind(this);
     this.setNotification = this.setNotification.bind(this);
@@ -52,9 +52,9 @@ class Notification extends Component {
   async readAllNotif() {
     try {
       const { token } = this.props;
-      await axios.patch('https://devrepublic-bn-backend.herokuapp.com/api/v1/notifications/all-read', {}, { headers: { token } });
+      await axios.patch('https://devrepublic-bn-backend.herokuapp.com/api/v1/notifications/all-read', {}, { headers: { token: token || localStorage.getItem('token') } });
       return io('https://devrepublic-bn-backend.herokuapp.com', {
-        query: { token },
+        query: { token: token || localStorage.getItem('token') },
       }).on('initialize', this.setNotification);
     } catch (error) {
       this.setState({ error: true });

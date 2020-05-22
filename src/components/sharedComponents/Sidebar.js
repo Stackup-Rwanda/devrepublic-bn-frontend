@@ -1,15 +1,13 @@
-
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../../scss/sidebar.scss';
-import translate from '../languages/Translate';
 
 class SideBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slide: false,
+      slide: true,
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -35,7 +33,7 @@ class SideBar extends Component {
             {this.props.children}
           </Route>
         </div>
-        <button type="button" style={buttonStyle} onClick={this.handleChange}>{slide ? translate('close') : translate('open')}</button>
+        <button type="button" style={buttonStyle} onClick={this.handleChange}>{slide ? 'close' : 'open'}</button>
       </div>
     );
   }

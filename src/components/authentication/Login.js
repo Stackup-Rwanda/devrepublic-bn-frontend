@@ -93,7 +93,7 @@ class Login extends Component {
      return (
        <>
          <NavBarComponent />
-         <div className="signup-page">
+         <div className="login-page">
            <Container fluid>
              <Row>
                <Col xs="12" sm="12" md="12" lg="7">

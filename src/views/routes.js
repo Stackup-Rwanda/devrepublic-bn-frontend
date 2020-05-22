@@ -7,7 +7,7 @@ import Signup from '../components/authentication/Signup';
 import ProfileComponent from '../components/profile/Profile';
 import ResetPassword from '../components/authentication/resetPassword';
 import ForgotPassword from '../components/authentication/forgotPassword';
-import Dashboard from '../components/Dashboard';
+import Dashboard from '../components/dashboards/index';
 
 const Routes = () => (
   <Switch>

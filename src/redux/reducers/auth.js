@@ -2,7 +2,10 @@ import { LOGIN_ERROR, LOGIN_SUCCESS } from '../actions/actionsTypes';
 import authReducer from './CreateReducer';
 
 const initialState = {
-  user: null,
+  user: {
+    data: null,
+    isVerified: false,
+  },
   error: null,
 };
 
