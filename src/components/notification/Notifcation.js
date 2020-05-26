@@ -16,7 +16,7 @@ class Notification extends Component {
       notifications: [],
       error: false,
     };
-    this.socket = io('https://devrepublic-bn-backend.herokuapp.com', {
+    this.socket = io(process.env.BACKEND_LINK, {
       query: { token: props.token || localStorage.getItem('token') },
     });
     this.readAllNotif = this.readAllNotif.bind(this);
@@ -52,8 +52,8 @@ class Notification extends Component {
   async readAllNotif() {
     try {
       const { token } = this.props;
-      await axios.patch('https://devrepublic-bn-backend.herokuapp.com/api/v1/notifications/all-read', {}, { headers: { token: token || localStorage.getItem('token') } });
-      return io('https://devrepublic-bn-backend.herokuapp.com', {
+      await axios.patch(`${process.env.BACKEND_LINK}/api/v1/notifications/all-read`, {}, { headers: { token: token || localStorage.getItem('token') } });
+      return io(process.env.BACKEND_LINK, {
         query: { token: token || localStorage.getItem('token') },
       }).on('initialize', this.setNotification);
     } catch (error) {
@@ -85,6 +85,7 @@ class Notification extends Component {
       <div className="notification-wrapper">
         <button type="button" id="bell-button" onClick={() => this.setState((prev) => ({ show: !prev.show }))}>
           <img src={bell} alt="bell" className="notification-bell" />
+          {notifications.some((d) => d.status === 'unread') ? <div className="new-notification"> </div> : null}
         </button>
         <div className="notif-panel container" style={{ display: show ? 'block' : 'none ', height: showMore ? '440px' : '280px' }}>
           <p>

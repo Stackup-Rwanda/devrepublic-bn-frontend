@@ -80,3 +80,13 @@
   display: inline-block;
   text-align: center;
 }
+
+.new-notification {
+  background-color: white;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: fixed;
+  margin-left: -8px;
+}

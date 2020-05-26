@@ -41,7 +41,7 @@ export const getUserInfo = (token) => async (dispatch) => {
     },
   };
   try {
-    const response = await axios.get('https://devrepublic-bn-backend.herokuapp.com/api/v1/users/view-profile', options);
+    const response = await axios.get(`${process.env.BACKEND_LINK}/api/v1/users/view-profile`, options);
     dispatch(setUserInfo(response.data.data));
   } catch (error) {
     dispatch(profileFetchError(error.response.data.error));
@@ -58,7 +58,7 @@ export const setProfileImage = (token, image) => async (dispatch) => {
   const formdata = new FormData();
   formdata.append('image', image);
   try {
-    const response = await axios.post('https://devrepublic-bn-backend.herokuapp.com/api/v1/users/edit-profile-image', formdata, options);
+    const response = await axios.post(`${process.env.BACKEND_LINK}/api/v1/users/edit-profile-image`, formdata, options);
     return dispatch(setProfilePic(response.data.data));
   } catch (error) {
     return dispatch(setProfileImageError(error.response.data.error));
@@ -71,7 +71,7 @@ export const setEmailNotif = (token, bool) => async (dispatch) => {
       token,
     },
   };
-  const url = `https://devrepublic-bn-backend.herokuapp.com/api/v1/notifications/email-opt-${bool ? 'in' : 'out'}`;
+  const url = `${process.env.BACKEND_LINK}/api/v1/notifications/email-opt-${bool ? 'in' : 'out'}`;
   try {
     await axios.patch(url, {}, options);
     return dispatch(setEmailNotification(bool));
@@ -87,7 +87,7 @@ export const updateProfile = (token, user) => async (dispatch) => {
     },
   };
   try {
-    await axios.patch('https://devrepublic-bn-backend.herokuapp.com/api/v1/users/edit-profile', user, options);
+    await axios.patch(`${process.env.BACKEND_LINK}/api/v1/users/edit-profile`, user, options);
     await dispatch(getUserInfo(token));
   } catch (error) {
     dispatch(profileFetchError(error.response.data.error));
