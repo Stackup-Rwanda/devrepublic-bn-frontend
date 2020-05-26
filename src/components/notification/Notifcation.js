@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import io from 'socket.io-client';
+import { toast } from 'react-toastify';
 import bell from '../../assets/notificationbell.png';
 import '../../scss/notification.scss';
 import NotificationItem from './NotificationItem';
@@ -17,7 +18,7 @@ class Notification extends Component {
       error: false,
     };
     this.socket = io('https://devrepublic-bn-backend.herokuapp.com', {
-      query: { token: props.token },
+      query: { token: props.token || localStorage.getItem('token') },
     });
     this.readAllNotif = this.readAllNotif.bind(this);
     this.setNotification = this.setNotification.bind(this);
@@ -43,7 +44,12 @@ class Notification extends Component {
       newState.unshift(JSON.parse(data));
       return { notifications: newState };
     });
+    toast.info(JSON.parse(data).content, {
+      autoClose: 9000,
+      position: 'top-right',
+    });
   }
+
 
   setError() {
     this.setState({ error: false });
@@ -52,7 +58,7 @@ class Notification extends Component {
   async readAllNotif() {
     try {
       const { token } = this.props;
-      await axios.patch('https://devrepublic-bn-backend.herokuapp.com/api/v1/notifications/all-read', {}, { headers: { token } });
+      await axios.patch('https://devrepublic-bn-backend.herokuapp.com/api/v1/notifications/all-read', {}, { headers: { token: token || localStorage.getItem('token') } });
       return io('https://devrepublic-bn-backend.herokuapp.com', {
         query: { token },
       }).on('initialize', this.setNotification);
