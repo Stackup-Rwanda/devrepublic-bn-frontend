@@ -145,8 +145,8 @@ export class Profile extends Component {
             <Link to="/profile">{translate('Profile')}</Link>
           </div>
           <div className="nav-item">
-            <Link to="/trips">
-              {translate('Trips')}
+            <Link to="/dashboard">
+              {translate('Travel Requests')}
             </Link>
           </div>
         </SideBar>
@@ -240,6 +240,6 @@ Profile.defaultProps = {
 };
 const mapStateToProps = ({ profile, user }) => ({
   profile,
-  token: user.user || null,
+  token: user.user.data,
 });
 export default injectIntl(connect(mapStateToProps)(Profile));

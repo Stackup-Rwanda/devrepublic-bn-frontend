@@ -63,5 +63,20 @@
     "view more": "view more",
     "HOME": "Home",
     "Make travel arrangement with us.": "Make travel arrangement with us.",
-    "Have more control on your travel experience.": "Have more control on your travel experience."
+    "Have more control on your travel experience.": "Have more control on your travel experience.",
+    "All travel Requests": "All travel Requests",
+    "Requester Dashboard": "Requester Dashboard",
+    "Travel Requests": "Travel Requests",
+    "No request found. Create a request!": "No request found. Create a request!",
+    "Trip Details": "Trip Details",
+    "Type": "Type",
+    "Departure Date": "Departure Date",
+    "Accommodation": "Accommodation",
+    "Reason:": "Reason",
+    "Status": "Status",
+    "No request created by your direct reports yet!": "No request created by your direct reports yet!",
+    "Manager Dashboard": "Manager Dashboard",
+    "Requester": "Requester",
+    "Departure": "Departure",
+    "rejected": "rejected"
 }

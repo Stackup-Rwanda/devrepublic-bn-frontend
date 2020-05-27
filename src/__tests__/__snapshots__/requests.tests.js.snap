@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index dashboard snapshot should create a NewAndSearch snapshot 1`] = `
+<NewAndSearch>
+  <div>
+    <img
+      alt="search icon"
+      className="icon"
+      src="test-file-stub"
+    />
+    <img
+      alt="add icon"
+      className="icon add-icon"
+      src="test-file-stub"
+    />
+  </div>
+</NewAndSearch>
+`;
+
+exports[`Index dashboard snapshot should create a dashboard container snapshot 1`] = `undefined`;
+
+exports[`Manager dashboard snapshot should create a dashboard snapshot 1`] = `undefined`;
+
+exports[`Requester dashboard snapshot should create a dashboard snapshot 1`] = `undefined`;

@@ -27,7 +27,7 @@ class NavBarComponent extends Component {
     const { language } = this.state;
     return (
       <Navbar fixed="top" expand="lg" className="nav-bar">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src={logo}
             width="30"

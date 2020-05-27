@@ -32,7 +32,7 @@ export class AuthNavBar extends Component {
     const { image, token } = this.props;
     return (
       <Navbar fixed="top" expand="lg" className="nav-bar">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src={logo}
             width="30"
@@ -45,14 +45,14 @@ export class AuthNavBar extends Component {
         <Navbar.Collapse id="responsive-navbar-nav" bsPrefix="navbar-collapse">
           <Nav className="mr-auto" />
           <Nav>
-            <Button className="nav-bar_btn">
+            <Button className="nav-bar_btn text-center" href="/">
               {' '}
               {
                   translate('HOME')
                 }
             </Button>
             <Nav.Link>
-              <Notification token={token} />
+              <Notification token={token || localStorage.getItem('token')} />
             </Nav.Link>
             <img src={image || placeholder} alt="profile" className="nav-profile-img" />
             <DropdownButton title={language} alignRight variant="inherit" onSelect={this.handleSelect} className="select-lang" bsPrefix="nav-bar_dropdown">
