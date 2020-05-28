@@ -80,7 +80,6 @@
   display: inline-block;
   text-align: center;
 }
-
 .new-notification {
   background-color: white;
   display: inline-block;
@@ -89,4 +88,13 @@
   border-radius: 50%;
   position: fixed;
   margin-left: -8px;
+}
+.notif-message a {
+  color: $primary_color;
+}
+.notif-message a:hover {
+  color: $primary_color;
+}
+#bell-button:focus {
+  outline: none;
 }

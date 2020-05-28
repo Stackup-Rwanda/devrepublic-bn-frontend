@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { Route } from 'react-router-dom';
 import io from 'socket.io-client';
 import { toast } from 'react-toastify';
 import bell from '../../assets/notificationbell.png';
@@ -99,7 +100,9 @@ class Notification extends Component {
             <span style={{ display: error ? 'block' : 'none' }}>{translate('all notification already seen')}</span>
           </p>
           <div className="notifications" style={showMore ? style : null}>
-            {showMore ? allItem : allItem.slice(0, 3)}
+            <Route>
+              {showMore ? allItem : allItem.slice(0, 3)}
+            </Route>
           </div>
           <div className="row notif-buttons">
             <button type="button" className="col" id="mark-all" onClick={this.readAllNotif}>{translate('mark all as read')}</button>
