@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import io from 'socket.io-client';
+import { toast } from 'react-toastify';
 import bell from '../../assets/notificationbell.png';
 import '../../scss/notification.scss';
 import NotificationItem from './NotificationItem';
@@ -43,7 +44,12 @@ class Notification extends Component {
       newState.unshift(JSON.parse(data));
       return { notifications: newState };
     });
+    toast.info(JSON.parse(data).content, {
+      autoClose: 9000,
+      position: 'top-right',
+    });
   }
+
 
   setError() {
     this.setState({ error: false });
