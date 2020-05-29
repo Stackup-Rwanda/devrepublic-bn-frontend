@@ -16,7 +16,8 @@
     "react/jsx-props-no-spreading": ["off"],
     "eslint linebreak-style": [0, "error", "windows"],
     "linebreak-style": 0,
-    "global-require": 0
+    "global-require": 0,
+    "jsx-a11y/label-has-associated-control": 0
   },
   "env": {
     "browser": true,

@@ -23,6 +23,7 @@ const initialState = {
   emailNotifications: null,
   isVerified: null,
   department: '',
+  gender: '',
 };
 
 const userReducer = (state = initialState, action) => {

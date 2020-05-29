@@ -12,7 +12,6 @@ import { getRequestsAction } from '../../redux/actions/getRequests';
 import {
   checkStatus, requestDates, columnTitles, reasonColumnTitle, spinnner, dashboardSidebar,
 } from './sharedFuncs';
-import NewAndSearch from './NewAndSearch';
 import placeholder from '../../assets/users.png';
 import translate from '../languages/Translate';
 import pagination from '../../util/pagination';
@@ -66,11 +65,12 @@ class ManagerDashboard extends Component {
               <Col lg="10" sm="11" md="9" xs="11" className="col-1">
 
                 <Row>
-                  <MainHeader allTrips={requests} filter={this.filter} />
-                  <Col className="all-icons text-center">
-                    <NewAndSearch />
+                  <Col className="requester-Dashboard">
+                    <div className="request-dashboard-title ">
+                      { translate('Manager Dashboard') }
+                    </div>
+                    <MainHeader allTrips={requests} filter={this.filter} />
                   </Col>
-
                 </Row>
                 {
                   loading ? (

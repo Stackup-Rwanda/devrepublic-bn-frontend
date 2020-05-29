@@ -56,7 +56,7 @@ width: 30px;
 .table-header{
     margin-right: 20px;
 }
-.rejectedStatus{
+.rejectedStatuss{
 color: rgb(201, 26, 26);
 padding: 5px;
 }
@@ -92,11 +92,11 @@ padding: 5px;
 }
 .dashboard-view{
     overflow-y: auto;
-    // height: 83vh; 
+    height: 100vh; 
 
 }
 .dashboard-content{
-    height: 80vh; 
+    height: 100vh; 
 
 }
 .profile-image{

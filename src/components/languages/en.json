@@ -112,5 +112,20 @@
     "please choose a room first": "please choose a room first",
     "available rooms": "available rooms",
     "Checkin": "Checkin",
-    "Checkout": "Checkout"
+    "Checkout": "Checkout",
+    "Departure:": "Departure",
+    "One way trip": "One way trip",
+    "Return trip":"Return trip",
+    "Multicity trip": "Multicity trip",
+    "New Request": "New Request",
+    "Location": "Location",
+    "Destination": "Destination",
+    "Trip Reason":"Trip Reason",
+    "Create": "Create",
+    "New trip request": "New trip request",
+    "One way": "One way",
+    "Return": "Return",
+    "Return Date:": "Return Date:",
+    "ADD STOPS": "ADD STOPS",
+    "Remove": "Remove"
 }

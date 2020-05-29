@@ -10,6 +10,7 @@ import viewUsersReducer from './getUsersReducer';
 import setRolesReducer from './setRolesReducer';
 import statsReducer from './stats';
 import facilityReducer from './facilityReducer';
+import createRequestsReducer from './createRequests';
 
 export default combineReducers({
   user: authReducer,
@@ -23,4 +24,5 @@ export default combineReducers({
   setRolesReducer,
   stats: statsReducer,
   facilities: facilityReducer,
+  newRequest: createRequestsReducer,
 });

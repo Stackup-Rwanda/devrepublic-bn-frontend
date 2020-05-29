@@ -47,10 +47,19 @@ describe('Requester dashboard snapshot', () => {
     });
     wrapper.setState({
       requests: [{ id: 'asedr45', userId: 'wert45' }],
+      firstName: 'this.props.profile.firstName',
+      lastName: 'this.props.profile.lastName',
+      role: 'this.props.profile.role',
+      gender: 'Male',
     });
     expect(wrapper.state().requests).toHaveLength(1);
     wrapper.instance().findAccommodation({ id: 'wer345d' }, { requestId: 'wer345d' });
     wrapper.instance().findAccommodation({ id: 'oppop' }, { requestId: 'wer345d' });
+    wrapper.instance().hanldeCancel();
+    wrapper.instance().hanldeSelectedTrip({ target: { value: 'One way trip' } });
+    wrapper.instance().hanldeSelectedTrip({ target: { value: 'Return trip' } });
+    wrapper.instance().hanldeSelectedTrip({ target: { value: 'Multicity trip' } });
+    wrapper.instance().hanldeSelectedTrip({ target: { value: 'Muwswseded trip' } });
     checkStatus({ status: 'rejected' });
     checkStatus({ status: 'open' });
     checkStatus({ status: 'approved' });
