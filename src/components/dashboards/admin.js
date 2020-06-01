@@ -78,6 +78,11 @@ class AdminDashboard extends Component {
                     {translate('Trips')}
                   </Link>
                 </div>
+                <div className="nav-item same-page">
+                  <Link to="/chat">
+                    {translate('Chat')}
+                  </Link>
+                </div>
               </SideBar>
             </Col>
             <Col lg="10" sm="11" md="9" xs="11" className="col-1">

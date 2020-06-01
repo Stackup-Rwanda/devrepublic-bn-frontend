@@ -70,6 +70,11 @@ export const dashboardSidebar = () => (
           {translate('Facilities')}
         </Link>
       </div>
+      <div className="nav-item same-page">
+        <Link to="/chat">
+          {translate('Chat')}
+        </Link>
+      </div>
     </SideBar>
   </>
 );

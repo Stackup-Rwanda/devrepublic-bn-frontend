@@ -8,7 +8,7 @@ class SideBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slide: true,
+      slide: false,
     };
     this.handleChange = this.handleChange.bind(this);
   }

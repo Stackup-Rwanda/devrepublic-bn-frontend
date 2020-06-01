@@ -10,6 +10,7 @@ import ForgotPassword from '../components/authentication/forgotPassword';
 import Dashboard from '../components/dashboards/index';
 import Stats from '../components/sharedComponents/Stats';
 import Facilities from '../components/facilities/Facilities';
+import ChatBoard from '../components/chat/chat';
 
 const Routes = () => (
   <Switch>
@@ -22,6 +23,7 @@ const Routes = () => (
     <Route exact path="/facilities" component={Facilities} />
     <Route exact path="/dashboard" component={Dashboard} />
     <Route exact path="/stats" component={Stats} />
+    <Route exact path="/chat" component={ChatBoard} />
     <Route component={NotFound} />
   </Switch>
 );

@@ -159,6 +159,11 @@ export class Profile extends Component {
               {translate('Facilities')}
             </Link>
           </div>
+          <div className="nav-item same-page">
+            <Link to="/chat">
+              {translate('Chat')}
+            </Link>
+          </div>
         </SideBar>
         <NavBar token={token || localStorage.getItem('token')} image={this.props.profile.image} />
         <Container fluid="lg" className="profile-container">
