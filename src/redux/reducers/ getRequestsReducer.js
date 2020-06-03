@@ -11,8 +11,8 @@ const initialState = {
 export default getRequestsReducer(initialState, {
   [GET_REQUESTS_SUCCESS]: (state, { payload }) => ({
     ...state,
-    requests: payload.requests,
-    bookings: payload.bookings,
+    requests: payload.data.requests,
+    bookings: payload.data.bookings,
   }),
   [GET_REQUESTS_FAILURE]: (state, { payload }) => ({
     ...state,

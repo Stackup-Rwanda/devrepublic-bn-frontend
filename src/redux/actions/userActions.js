@@ -1,4 +1,5 @@
 import axios from 'axios';
+import axiosOptions from '../../util/axiosOption';
 import {
   GET_USER_INFO,
   PROFILE_FETCH_ERROR,
@@ -35,13 +36,8 @@ export const setEmailNotificationError = (error) => ({
   payload: error,
 });
 export const getUserInfo = (token) => async (dispatch) => {
-  const options = {
-    headers: {
-      token,
-    },
-  };
   try {
-    const response = await axios.get(`${process.env.BACKEND_LINK}/api/v1/users/view-profile`, options);
+    const response = await axios.get(`${process.env.BACKEND_LINK}/api/v1/users/view-profile`, axiosOptions(token));
     dispatch(setUserInfo(response.data.data));
   } catch (error) {
     dispatch(profileFetchError(error.response.data.error));
@@ -66,14 +62,9 @@ export const setProfileImage = (token, image) => async (dispatch) => {
 };
 
 export const setEmailNotif = (token, bool) => async (dispatch) => {
-  const options = {
-    headers: {
-      token,
-    },
-  };
   const url = `${process.env.BACKEND_LINK}/api/v1/notifications/email-opt-${bool ? 'in' : 'out'}`;
   try {
-    await axios.patch(url, {}, options);
+    await axios.patch(url, {}, axiosOptions(token));
     return dispatch(setEmailNotification(bool));
   } catch (error) {
     return dispatch(setEmailNotificationError(error.response.data.error));
@@ -81,13 +72,8 @@ export const setEmailNotif = (token, bool) => async (dispatch) => {
 };
 
 export const updateProfile = (token, user) => async (dispatch) => {
-  const options = {
-    headers: {
-      token,
-    },
-  };
   try {
-    await axios.patch(`${process.env.BACKEND_LINK}/api/v1/users/edit-profile`, user, options);
+    await axios.patch(`${process.env.BACKEND_LINK}/api/v1/users/edit-profile`, user, axiosOptions(token));
     await dispatch(getUserInfo(token));
   } catch (error) {
     dispatch(profileFetchError(error.response.data.error));
