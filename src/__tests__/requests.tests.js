@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { Provider } from 'react-redux';
 import { mount, shallow } from 'enzyme';
 import dotenv from 'dotenv';
 import toJson from 'enzyme-to-json';
-import reduxStore from '../store';
 import { RequesterDashboard as Requester } from '../components/dashboards/RequesterDashboard';
 import { ManagerDashboard as Manager } from '../components/dashboards/ManagerDashboard';
 import Dashboard from '../components/dashboards/index';

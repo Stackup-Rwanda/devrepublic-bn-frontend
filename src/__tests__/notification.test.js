@@ -14,7 +14,7 @@ jest.mock('socket.io-client', () => {
   const on = jest.fn(() => [{
     id: 'fafwefwefwefw', content: 'this is a comment', createdAt: '2019-02-02', status: 'read',
   }]);
-  const socket = { emit, on };
+  const socket = { emit, on, connect: jest.fn() };
   return jest.fn(() => socket);
 });
 

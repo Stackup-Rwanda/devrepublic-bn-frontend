@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainPanel /> render correctly date component 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-8 col-md-12 col-sm-12 col-12"
+    >
+      <div
+        className="pagination"
+      >
+        <div
+          className="pagination_item"
+        >
+          <div
+            className="select-container"
+          >
+            <select
+              className="pagination_select"
+              name="filter"
+              onChange={[Function]}
+              value="all"
+            >
+              <option
+                value="all"
+              >
+                All Travel Requests
+              </option>
+              <option
+                value="open"
+              >
+                Open travel Requests
+              </option>
+              <option
+                value="rejected"
+              >
+                Rejected Travel Requests
+              </option>
+              <option
+                value="accepted"
+              >
+                Accepted Travel Requests
+              </option>
+            </select>
+            <i
+              className="arrow down"
+            />
+          </div>
+        </div>
+        <div
+          className="page-controller"
+        >
+          <div
+            className="pagination_item number"
+          >
+            <h5>
+              1
+            </h5>
+          </div>
+          <div
+            className="pagination_item arrows"
+          >
+            <button
+              name="down"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="arrow left"
+              >
+                 
+              </i>
+            </button>
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="arrow right"
+              >
+                 
+              </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

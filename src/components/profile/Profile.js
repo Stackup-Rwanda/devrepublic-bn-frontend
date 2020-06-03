@@ -136,7 +136,7 @@ export class Profile extends Component {
       email, role, language, submitLoading, currency, department, birthdate, modified,
     } = this.state;
 
-    const { intl } = this.props;
+    const { intl, token } = this.props;
     const choose = intl.formatMessage({ id: 'Choose...', value: 'Choose...' });
     return redirect ? (<Redirect to="/login" />) : (
       <>
@@ -150,7 +150,7 @@ export class Profile extends Component {
             </Link>
           </div>
         </SideBar>
-        <NavBar />
+        <NavBar token={token || localStorage.getItem('token')} image={this.props.profile.image} />
         <Container fluid="lg" className="profile-container">
           <Row>
             <Col md={5} className="d-flex flex-column align-items-center profile-column">
