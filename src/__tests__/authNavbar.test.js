@@ -5,6 +5,15 @@ import { MemoryRouter as Router } from 'react-router-dom';
 import translation from '../components/languages/en.json';
 import { AuthNavBar } from '../components/sharedComponents/AuthNavBar';
 
+jest.mock('socket.io-client', () => {
+  const emit = jest.fn();
+  const on = jest.fn(() => [{
+    id: 'fafwefwefwefw', content: 'this is a comment', createdAt: '2019-02-02', status: 'read',
+  }]);
+  const socket = { emit, on };
+  return jest.fn(() => socket);
+});
+
 describe('<AuthNavBar />', () => {
   const wrapper = mount(
     <IntlProvider defaultLocale="en" locale="en" messages={translation}>
