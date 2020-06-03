@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import dotenv from 'dotenv';
 import { mount } from 'enzyme';
 import io from 'socket.io-client';
 import renderer from 'react-test-renderer';
@@ -7,6 +8,7 @@ import { IntlProvider } from 'react-intl';
 import Notification from '../components/notification/Notifcation';
 import translation from '../components/languages/en.json';
 
+dotenv.config();
 jest.mock('socket.io-client', () => {
   const emit = jest.fn();
   const on = jest.fn(() => [{
@@ -38,7 +40,7 @@ describe('<Notification>', () => {
       </IntlProvider>
     );
     mount(container);
-    expect(io).toHaveBeenCalledWith('https://devrepublic-bn-backend.herokuapp.com', { query: { token: 'thisisatoken' } });
+    expect(io).toHaveBeenCalledWith(process.env.BACKEND_LINK, { query: { token: 'thisisatoken' } });
   });
   it('should have default state', () => {
     const container = (
