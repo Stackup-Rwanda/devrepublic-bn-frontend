@@ -6,6 +6,8 @@ import signupReducer from './signupReducer';
 import forgotPasswordReducer from './forgotPassword';
 import resetPasswordReducer from './resetPassword';
 import getRequestsReducer from './ getRequestsReducer';
+import viewUsersReducer from './getUsersReducer';
+import setRolesReducer from './setRolesReducer';
 
 export default combineReducers({
   user: authReducer,
@@ -15,4 +17,6 @@ export default combineReducers({
   forgotPasswordReducer,
   resetPasswordReducer,
   requests: getRequestsReducer,
+  viewUsers: viewUsersReducer,
+  setRolesReducer,
 });

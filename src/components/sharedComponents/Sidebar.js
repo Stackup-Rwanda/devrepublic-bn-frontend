@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../../scss/sidebar.scss';
+import translate from '../languages/Translate';
 
 class SideBar extends Component {
   constructor(props) {
@@ -21,10 +22,10 @@ class SideBar extends Component {
   render() {
     const { slide } = this.state;
     const style = {
-      display: slide ? 'block' : 'none',
+      display: slide ? 'none' : 'block',
     };
     const buttonStyle = {
-      left: slide ? '194px' : '2px',
+      left: slide ? '2px' : '194px',
     };
     return (
       <div className="sidebar-wrapper">
@@ -33,7 +34,7 @@ class SideBar extends Component {
             {this.props.children}
           </Route>
         </div>
-        <button type="button" style={buttonStyle} onClick={this.handleChange}>{slide ? 'close' : 'open'}</button>
+        <button type="button" style={buttonStyle} onClick={this.handleChange}>{slide ? translate('open') : translate('close')}</button>
       </div>
     );
   }

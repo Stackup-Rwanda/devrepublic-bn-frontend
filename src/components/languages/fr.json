@@ -78,6 +78,25 @@
     "Manager Dashboard": "Tableau de bord du gestionnaire",
     "Requester": "Demandeur",
     "Departure": "Départ",
-    "rejected": "rejetée"
-
+    "rejected": "rejetée",
+    "Overview": "Aperçu",
+    "Users": "Utilisateurs",
+    "User": "Utilisateur",
+    "Roles": "Rôles",
+    "Facilities": "Installations",
+    "Super Admin Dashboard": "Tableau de bord de Super Administrateur",
+    "All Users": "Tous les utilisateurs",
+    "Manager": "Directeur",
+    "Date Joined": "Date d'adhésion",
+    "ASSIGN A MANAGER": "ASSIGNER UN MANAGER",
+    "SET ROLE": "DEFINIR LE ROLE",
+    "Set Role": "Définir le rôle",
+    "manager": "directeur",
+    "travel team member": "membre de l'équipe de voyage",
+    "requester": "demandeur",
+    "travel administrator": "administrateur de voyages",
+    "super administrator": "super administrateur",
+    "supplier": "fournisseur",
+    "Cancel": "Annuler",
+    "Assign": "Attribuer"
 }

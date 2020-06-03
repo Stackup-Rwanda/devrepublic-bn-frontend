@@ -2,15 +2,16 @@
 @import '~bootstrap/scss/bootstrap';
 @import './_config';
 
-.whole-conatainer {
+.whole-container {
     margin-top: 59px;
-    height: 100vh;
 }
+
+
 .all-icons{
     margin-left: 450px;
     margin-top: 20px;
-
 }
+
 .icon{
 height: 30px;
 width: 30px;
@@ -27,8 +28,6 @@ width: 30px;
 .request-dashboard-title{
     font-size: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
-
     color: $primary-color;
 
 }
@@ -50,29 +49,27 @@ width: 30px;
 .rows-container{
     margin-top: 10px;
 }
+
 .col-titles{
     color: $primary-color;
 }
+
 .table-header{
     margin-right: 20px;
 }
+
 .rejectedStatus{
-color: rgb(201, 26, 26);
+background-color: rgb(201, 26, 26);
+color: white;
+border-radius: 20px;
 padding: 5px;
-}
-.openStatus{
-color: $secondary-color;
-padding: 5px;
-}
-.approvedStatus{
-color: $primary-color;
-padding: 5px;
+box-shadow: 1px 1px #a7a7a7
 }
 
 .col-status{
 width: 20px;
-font-weight: bold;
 }
+
 .selectable{
     cursor: pointer;
 }
@@ -81,24 +78,17 @@ font-weight: bold;
     font-size: 14px;
     color: $primary-color;
 }
-.trip-details{
-    width: 400px;
-}
+
 .firstName {
  padding: 1px;
 }
 .lastName{
 padding: 5px;
 }
-.dashboard-view{
+.super-admin-dashboard-view{
     overflow-y: auto;
-    // height: 83vh; 
-
 }
-.dashboard-content{
-    height: 80vh; 
 
-}
 .profile-image{
     display: block;
     width: 60px;
@@ -109,11 +99,26 @@ padding: 5px;
     color: $primary-color;
 font-size: 20px;
 }
-.spinner-loading{
-    width: 5rem;
-    height: 5rem;
-    color: $primary-color;
+
+.col-departure-date .dropdown .dropdown-item:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    color: white;
+    background: rgb(27, 44, 71) !important;
 }
-.loadingText{
-    color: $primary-color;
+  
+.col-departure-date .dropdown-menu {
+position: fixed;
 }
+  
+.col-departure-date  .dropdown .dropdown-menu .dropdown-item {
+padding: 1rem;
+margin-left: 0;
+}
+
+.col-departure-date  .dropdown .dropdown-menu .dropdown-item:hover {
+box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+color: white;
+background: rgb(27, 44, 71) !important;
+}
+  
+  
