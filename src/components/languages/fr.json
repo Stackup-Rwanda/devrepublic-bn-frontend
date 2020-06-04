@@ -98,5 +98,13 @@
     "super administrator": "super administrateur",
     "supplier": "fournisseur",
     "Cancel": "Annuler",
-    "Assign": "Attribuer"
+    "Assign": "Attribuer",
+    "Total Trips": "Total voyages",
+    "Upcoming Trips": "Prochains voyages",
+    "Past Years": "Dernières années",
+    "Travel Statistics": "Statistiques de voyage",
+    "Status Statistics": "Statistiques de statut",
+    "Open Requests": "Demandes ouvertes",
+    "Approved Requests": "Demandes approuvées",
+    "Rejected Requests": "Demandes rejetées"
 }

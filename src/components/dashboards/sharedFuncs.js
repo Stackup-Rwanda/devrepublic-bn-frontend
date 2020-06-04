@@ -53,11 +53,21 @@ export const dashboardSidebar = () => (
   <>
     <SideBar>
       <div className="nav-item">
+        <Link to="/stats">
+          {translate('Overview')}
+        </Link>
+      </div>
+      <div className="nav-item">
         <Link to="/profile">{translate('Profile')}</Link>
       </div>
       <div className="nav-item same-page">
         <Link to="/dashboard">
           {translate('Travel Requests')}
+        </Link>
+      </div>
+      <div className="nav-item">
+        <Link to="/facilities">
+          {translate('Facilities')}
         </Link>
       </div>
     </SideBar>
