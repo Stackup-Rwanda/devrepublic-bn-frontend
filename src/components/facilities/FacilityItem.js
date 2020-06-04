@@ -6,10 +6,25 @@ import building from '../../assets/facility-placeholder.jpg';
 import translate from '../languages/Translate';
 
 const FacilityItem = ({
-  facility, setValue, show, role,
+  facility, setValue, show, role, userId, likeUnlikeFacility,
 }) => {
   const openPopup = () => {
     setValue(facility);
+  };
+  const like = () => {
+    const user = facility.likesId.find((el) => el === userId);
+    return user;
+  };
+  const unLiked = () => {
+    const user = facility.unlikesId.find((el) => el === userId);
+    return user;
+  };
+  const totalLikes = () => {
+    const result = facility.likes - facility.unlikes;
+    if (result >= 1000) {
+      return `${(result / 1000).toFixed(2)}k`;
+    }
+    return result;
   };
   return (
     <>
@@ -30,12 +45,15 @@ const FacilityItem = ({
         </div>
         <div className="rating-likes">
           <div className="likes">
-            <button type="button">
-              <LikeIcon fill="#065471" class="like-icon" type="like" />
-            </button>
-            <button type="button">
-              <LikeIcon fill="#065471" class="like-icon" type="dislike" />
-            </button>
+            <div>
+              <button className="like-button" type="button" onClick={() => likeUnlikeFacility(facility.id, 'like')} style={like() ? null : { stroke: '#065471', strokeWidth: '1px' }}>
+                <LikeIcon fill={like() ? '#065471' : '#ffffff'} class="like-icon" type="like" />
+              </button>
+              <button type="button" style={unLiked() ? null : { stroke: '#065471', strokeWidth: '1px' }} onClick={() => likeUnlikeFacility(facility.id, 'unlike')}>
+                <LikeIcon fill={unLiked() ? '#065471' : '#ffffff'} class="like-icon" type="dislike" />
+              </button>
+            </div>
+            <div className="total-likes">{totalLikes()}</div>
           </div>
           <div className="ratings">
             <button type="button">{translate('Add rating')}</button>
@@ -52,6 +70,8 @@ FacilityItem.propTypes = {
   setValue: PropTypes.func,
   show: PropTypes.bool,
   role: PropTypes.string,
+  userId: PropTypes.string,
+  likeUnlikeFacility: PropTypes.func,
 };
 
 export default FacilityItem;

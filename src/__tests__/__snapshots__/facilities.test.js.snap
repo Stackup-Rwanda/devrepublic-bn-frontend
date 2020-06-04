@@ -313,44 +313,66 @@ Array [
           <div
             className="likes"
           >
-            <button
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
+            <div>
+              <button
+                className="like-button"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "stroke": "#065471",
+                    "strokeWidth": "1px",
+                  }
+                }
+                type="button"
               >
-                <path
-                  className="like-svg"
-                  d="M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z"
-                  fill="#065471"
-                />
-              </svg>
-            </button>
-            <button
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  height="1em"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    className="like-svg"
+                    d="M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z"
+                    fill="#ffffff"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={[Function]}
+                style={
+                  Object {
+                    "stroke": "#065471",
+                    "strokeWidth": "1px",
+                  }
+                }
+                type="button"
               >
-                <path
-                  className="like-svg"
-                  d="M20 3h-1v13h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 16h7l-1.122 3.368A2 2 0 0 0 11.775 22H12l5-5.438V3H6l-3.937 8.649l-.063.293V14a2 2 0 0 0 2 2z"
-                  fill="#065471"
-                />
-              </svg>
-            </button>
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  height="1em"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    className="like-svg"
+                    d="M20 3h-1v13h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 16h7l-1.122 3.368A2 2 0 0 0 11.775 22H12l5-5.438V3H6l-3.937 8.649l-.063.293V14a2 2 0 0 0 2 2z"
+                    fill="#ffffff"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              className="total-likes"
+            >
+              0
+            </div>
           </div>
           <div
             className="ratings"
@@ -416,11 +438,11 @@ Array [
           Checkin
         </span>
         <input
-          min="2020-06-03"
+          min="2020-06-04"
           name="checkin"
           onChange={[Function]}
           type="date"
-          value="2020-06-03"
+          value="2020-06-04"
         />
       </div>
       <div
@@ -430,11 +452,11 @@ Array [
           Checkout
         </span>
         <input
-          min="2020-06-03"
+          min="2020-06-04"
           name="checkout"
           onChange={[Function]}
           type="date"
-          value="2020-06-03"
+          value="2020-06-04"
         />
       </div>
       <div

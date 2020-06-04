@@ -98,12 +98,25 @@ handleBooking = async (event) => {
   }
 }
 
+likeUnlikeFacility = async (id, type) => {
+  const token = localStorage.getItem('token');
+  try {
+    await axios.patch(`${process.env.BACKEND_LINK}/api/v1/facilities/${type}?id=${id}`, {}, axiosOption(token));
+    await this.props.dispatch(getFacilities(token));
+  } catch (error) {
+    toast.error('unable to like or unlike the facility', {
+      autoClose: 9000,
+      position: 'top-right',
+    });
+  }
+}
+
 render() {
   const {
     show, rooms, roomId, checkin, checkout,
   } = this.state;
-  const { intl, role } = this.props;
-  const facilities = this.props.facilities.map((el) => (<Item key={el.id} facility={el} setValue={this.setPopupValue} role={role} show={show} />));
+  const { intl, role, id } = this.props;
+  const facilities = this.props.facilities.map((el) => (<Item key={el.id} facility={el} setValue={this.setPopupValue} role={role} userId={id} show={show} likeUnlikeFacility={this.likeUnlikeFacility} />));
   const roomAvailable = rooms.filter((el) => el.availability);
   const roomOption = roomAvailable.map((el) => (
     <option key={el.id} value={el.id}>
@@ -180,6 +193,7 @@ Facilities.propTypes = {
   requests: PropTypes.array,
   intl: PropTypes.object,
   role: PropTypes.string,
+  id: PropTypes.string,
 };
 
 const mapStateToProps = ({ facilities, requests, profile }) => ({
@@ -187,6 +201,7 @@ const mapStateToProps = ({ facilities, requests, profile }) => ({
   facilityServerError: facilities.error,
   requests: requests.requests,
   role: profile.role,
+  id: profile.id,
 });
 
 export default injectIntl(connect(mapStateToProps)(Facilities));

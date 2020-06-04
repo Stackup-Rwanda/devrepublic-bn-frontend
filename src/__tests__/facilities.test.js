@@ -18,6 +18,7 @@ jest.mock('socket.io-client', () => {
 });
 
 const mockStore = configureStore([]);
+const dispatch = jest.fn();
 const store = mockStore({
   facilities: {
     facilities: [{
@@ -64,7 +65,7 @@ const store = mockStore({
   language: {
     language: 'en',
   },
-  dispatch: jest.fn(),
+  dispatch,
 });
 const store2 = mockStore({
   facilities: {
@@ -77,7 +78,7 @@ const store2 = mockStore({
       numOfRooms: 4,
       amenities: null,
       services: null,
-      likes: 0,
+      likes: 2000,
       totalRating: 0,
       averageRating: 0,
       likesId: [],
@@ -115,6 +116,7 @@ const store2 = mockStore({
   language: {
     language: 'en',
   },
+  dispatch,
 });
 
 describe('<Facilities>', () => {
@@ -224,6 +226,26 @@ describe('<Facilities>', () => {
     bookingButton.simulate('click');
     expect(element.instance().state.show).toBeTruthy();
   });
+  it('like a facility', () => {
+    const container = mount(
+      <IntlProvider defaultLocale="en" locale="en" messages={translation}>
+        <MemoryRouter>
+          <Provider store={store}>
+            <Facilities intl={{ formatMessage: jest.fn() }} />
+          </Provider>
+        </MemoryRouter>
+
+      </IntlProvider>,
+    );
+    const element = container.childAt(0).childAt(0).childAt(0).childAt(0)
+      .childAt(0)
+      .children();
+    const likeButton = element.find('.like-button');
+    likeButton.simulate('click');
+    expect(dispatch.mock.calls.length).toBe(0);
+    expect(element.instance().state.show).toBeFalsy();
+    expect(element.find('.total-likes').instance().textContent).toBe('0');
+  });
   it('it should not book when the check in date equals the checkout date', () => {
     const container = mount(
       <IntlProvider defaultLocale="en" locale="en" messages={translation}>
@@ -267,5 +289,6 @@ describe('<Facilities>', () => {
     select.simulate('change', { target: { value: '4ef246b8-b38a-44b6-9072-90b1763c0a76', name: 'roomId' } });
     bookingButton.simulate('click');
     expect(element.instance().state.roomId).toBe('4ef246b8-b38a-44b6-9072-90b1763c0a76');
+    expect(element.find('.total-likes').instance().textContent).toBe('2.00k');
   });
 });
