@@ -10,6 +10,15 @@ import { checkStatus } from '../components/dashboards/sharedFuncs';
 
 dotenv.config();
 
+jest.mock('socket.io-client', () => {
+  const emit = jest.fn();
+  const on = jest.fn(() => [{
+    id: 'fafwefwefwefw', content: 'this is a comment', createdAt: '2019-02-02', status: 'read',
+  }]);
+  const socket = { emit, on };
+  return jest.fn(() => socket);
+});
+
 describe('Requester dashboard snapshot', () => {
   const render = (params, fn = shallow) => {
     const defaultProps = {

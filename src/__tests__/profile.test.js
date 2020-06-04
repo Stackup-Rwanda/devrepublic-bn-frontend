@@ -8,6 +8,15 @@ import configureStore from 'redux-mock-store';
 import translation from '../components/languages/en.json';
 import ConnectedProfile from '../components/profile/Profile';
 
+jest.mock('socket.io-client', () => {
+  const emit = jest.fn();
+  const on = jest.fn(() => [{
+    id: 'fafwefwefwefw', content: 'this is a comment', createdAt: '2019-02-02', status: 'read',
+  }]);
+  const socket = { emit, on };
+  return jest.fn(() => socket);
+});
+
 const mockStore = configureStore([]);
 const store = mockStore({
   profile: {
