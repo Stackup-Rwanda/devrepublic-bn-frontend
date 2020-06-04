@@ -1,0 +1,175 @@
+@import './_variables';
+@import '~bootstrap/scss/bootstrap';
+@import './_config';
+
+
+.facility-container {
+  position: relative;
+  margin-top: 3rem;
+  padding: 2.7rem;
+  min-height: calc(100vh - 7rem);
+  margin-bottom: 30px;
+}
+.facilities-title {
+  color: $primary_color;
+  font-size: 20px;
+  margin-left: 120px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $primary_color;
+  @include  normal-mobile {
+    margin-left: 0px;
+  }
+}
+.facility-card-row {
+  margin-left: 120px !important;
+  @include  normal-mobile {
+    margin-left: 0px !important;
+  }
+}
+.facility-card {
+  width: 280px;
+  height: 400px;
+  background-color: #EFEFEF;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.facility-image {
+  width: 280px;
+  height: 190px;
+  background-color: green;
+}
+.facility-image img {
+  width: inherit;
+  height: inherit;
+}
+.facility-info {
+  margin-top: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.facility-name {
+  margin-left: 20px;
+}
+.facility-location {
+  margin-right: 20px;
+}
+
+.rating-likes {
+  display: flex;
+  justify-content: space-between;
+}
+.like-svg {
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.likes {
+  margin-left: 10px;
+}
+.likes button {
+  border: none;
+  background-color: inherit;
+  font-size: 30px;
+}
+.likes button:focus {
+  outline: none;
+}
+.average-rating {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ratings {
+  margin-right: 20px;
+}
+.ratings button, .book-facility {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $primary_color;
+  width: 104px;
+  height: 36px;
+  border: 1px solid rgba(0, 0, 0, 0.48);
+  box-sizing: border-box;
+  color: #fffffd;
+}
+.ratings button {
+  min-width: 104px;
+  width: fit-content;
+}
+.book-facility {
+  display: inline-block;
+  margin-left: calc(50% - 50px);
+}
+.book-popup {
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  width: 400px;
+  height: 250px;
+  background-color: #ffffff;
+  padding-left: 50px;
+  padding-top: 50px;
+  @include large-mobile {
+    position: absolute;
+    left: 20%;
+  }
+  @include normal-mobile {
+    position: absolute;
+    left: 2%;
+  }
+}
+.rooms {
+  margin-top: 20px;
+}
+.rooms span {
+  margin-right: 10px;
+}
+.rooms select {
+  width: 60%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.checkin span {
+  margin-right: 65px;
+}
+.checkout span {
+  margin-right: 55px;
+}
+.checkin input, .checkout input {
+  width: 60%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000000 !important;
+  border-radius: 2px !important;
+  height: 30px !important;
+}
+.book-button {
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.book-popup button:first-of-type {
+  margin-right: 10px;
+  background-color: inherit !important;
+  outline-color: red !important;
+  color: $primary_color;
+}
+.book-popup button:first-of-type:hover {
+  background-color: $primary_color !important;
+  color: #fffffd;
+}
+.book-popup button:last-of-type {
+  background-color: $primary_color !important;
+  color: white;
+}
+.book-error {
+  color: red;
+  text-align: center;
+  margin-left: 40px;
+  display: none;
+}
+.total-likes {
+  text-align: center;
+}

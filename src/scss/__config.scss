@@ -15,4 +15,9 @@
       @content;
   }
 }
+  @mixin normal-mobile {
+    @media (max-width: 575px) {
+        @content;
+    }
+  }
   

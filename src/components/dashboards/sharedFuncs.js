@@ -60,6 +60,11 @@ export const dashboardSidebar = () => (
           {translate('Travel Requests')}
         </Link>
       </div>
+      <div className="nav-item">
+        <Link to="/facilities">
+          {translate('Facilities')}
+        </Link>
+      </div>
     </SideBar>
   </>
 );

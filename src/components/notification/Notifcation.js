@@ -81,6 +81,7 @@ class Notification extends Component {
       allItem = notifications.map((el) => (
         <NotificationItem
           id={el.id}
+          requestId={el.requestId}
           content={el.content}
           status={el.status}
           createdAt={el.createdAt}

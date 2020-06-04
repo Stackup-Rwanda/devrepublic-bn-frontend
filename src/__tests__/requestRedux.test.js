@@ -1,5 +1,4 @@
 /* eslint-disable prefer-promise-reject-errors */
-import * as React from 'react';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import dotenv from 'dotenv';
@@ -52,9 +51,12 @@ describe('Request Tables reducer', () => {
     const response = getRequestsReducer(initialState, {
       type: GET_REQUESTS_SUCCESS,
       payload: {
-        bookings: [],
-        requests: [],
-        error: null,
+        data: {
+          bookings: [],
+          requests: [],
+          error: null,
+        },
+
       },
     });
     expect(response).toEqual({
