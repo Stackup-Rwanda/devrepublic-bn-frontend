@@ -9,10 +9,20 @@ Array [
       className="sidebar"
       style={
         Object {
-          "display": "none",
+          "display": "block",
         }
       }
     >
+      <div
+        className="nav-item"
+      >
+        <a
+          href="/stats"
+          onClick={[Function]}
+        >
+          Overview
+        </a>
+      </div>
       <div
         className="nav-item"
       >
@@ -48,12 +58,12 @@ Array [
       onClick={[Function]}
       style={
         Object {
-          "left": "2px",
+          "left": "194px",
         }
       }
       type="button"
     >
-      open
+      close
     </button>
   </div>,
   <nav
