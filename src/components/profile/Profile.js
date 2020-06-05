@@ -141,12 +141,22 @@ export class Profile extends Component {
     return redirect ? (<Redirect to="/login" />) : (
       <>
         <SideBar>
+          <div className="nav-item">
+            <Link to="/stats">
+              {translate('Overview')}
+            </Link>
+          </div>
           <div className="nav-item same-page">
             <Link to="/profile">{translate('Profile')}</Link>
           </div>
           <div className="nav-item">
             <Link to="/dashboard">
               {translate('Travel Requests')}
+            </Link>
+          </div>
+          <div className="nav-item">
+            <Link to="/facilities">
+              {translate('Facilities')}
             </Link>
           </div>
         </SideBar>

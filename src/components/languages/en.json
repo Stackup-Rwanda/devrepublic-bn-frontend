@@ -98,5 +98,12 @@
     "super administrator": "super administrator",
     "supplier": "supplier",
     "Cancel": "Cancel",
-    "Assign": "Assign"
+    "Assign": "Assign",
+    "Total Trips": "Total Trips",
+    "Upcoming Trips": "Upcoming Trips",
+    "Past Years": "Past Years",
+    "Status Statistics": "Status Statistics",
+    "Open Requests": "Open Requests",
+    "Approved Requests": "Approved Requests",
+    "Rejected Requests": "Rejected Requests"
 }

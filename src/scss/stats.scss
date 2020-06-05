@@ -1,0 +1,29 @@
+@import './_variables';
+@import './_config';
+
+.stats {
+  margin-top: 4rem;
+  margin-left: 3rem;
+}
+
+.card {
+  background-color: $secondary-color !important;
+  color: $primary-color;
+  text-align: center;
+  margin-top: 1rem;
+
+  #{&}_stat {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+}
+
+.status_card {
+  background-color: $primary-color !important;
+  color: $secondary-color;
+
+  #{&}_stat {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+}

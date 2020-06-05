@@ -8,6 +8,7 @@ import ProfileComponent from '../components/profile/Profile';
 import ResetPassword from '../components/authentication/resetPassword';
 import ForgotPassword from '../components/authentication/forgotPassword';
 import Dashboard from '../components/dashboards/index';
+import Stats from '../components/sharedComponents/Stats';
 
 const Routes = () => (
   <Switch>
@@ -18,6 +19,7 @@ const Routes = () => (
     <Route exact path="/password/reset" component={ResetPassword} />
     <Route exact path="/password/forgot" component={ForgotPassword} />
     <Route exact path="/dashboard" component={Dashboard} />
+    <Route exact path="/stats" component={Stats} />
     <Route component={NotFound} />
   </Switch>
 );

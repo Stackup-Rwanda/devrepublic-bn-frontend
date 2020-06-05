@@ -15,3 +15,5 @@ export const GET_USERS_SUCCESS = 'GET_USERS_SUCCESS';
 export const GET_USERS_ERROR = 'GET_USERS_ERROR';
 export const SET_ROLE_SUCCESS = 'SET_ROLE_SUCCESS';
 export const SET_ROLE_ERROR = 'SET_ROLE_ERROR';
+export const GET_STATS = 'GET_STATS';
+export const GET_STATS_ERROR = 'GET_STATS_ERROR';
