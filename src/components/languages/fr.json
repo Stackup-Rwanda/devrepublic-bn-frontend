@@ -106,5 +106,13 @@
     "Status Statistics": "Statistiques de statut",
     "Open Requests": "Demandes ouvertes",
     "Approved Requests": "Demandes approuvées",
-    "Rejected Requests": "Demandes rejetées"
+    "Rejected Requests": "Demandes rejetées",
+    "Book": "réserver",
+    "Add rating": "Ajouter une note",
+    "Facilities available": "Installations disponibles",
+    "please choose a room first": "veuillez d'abord choisir une chambre",
+    "available rooms": "chambres disponibles",
+    "Checkin": "arriver",
+    "Checkout": "quitter"
+
 }

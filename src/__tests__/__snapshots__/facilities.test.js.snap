@@ -1,0 +1,476 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Facilities> render correctly Facilities component 1`] = `
+Array [
+  <div
+    className="sidebar-wrapper"
+  >
+    <div
+      className="sidebar"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <div
+        className="nav-item"
+      >
+        <a
+          href="/profile"
+          onClick={[Function]}
+        >
+          Profile
+        </a>
+      </div>
+      <div
+        className="nav-item"
+      >
+        <a
+          href="/dashboard"
+          onClick={[Function]}
+        >
+          Travel Requests
+        </a>
+      </div>
+      <div
+        className="nav-item same-page"
+      >
+        <a
+          href="/facilities"
+          onClick={[Function]}
+        >
+          Facilities
+        </a>
+      </div>
+    </div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "left": "2px",
+        }
+      }
+      type="button"
+    >
+      open
+    </button>
+  </div>,
+  <nav
+    className="nav-bar navbar navbar-expand-lg navbar-light fixed-top"
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+    >
+      <img
+        alt="barefoot nomad logo"
+        className="d-inline-block align-top"
+        height="30"
+        src="test-file-stub"
+        width="30"
+      />
+    </a>
+    <button
+      aria-controls="responsive-navbar-nav"
+      aria-label="Toggle navigation"
+      className="nav-bar_items navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      aria-expanded={null}
+      className="navbar-collapse collapse"
+      id="responsive-navbar-nav"
+    >
+      <div
+        className="mr-auto navbar-nav"
+        onKeyDown={[Function]}
+      />
+      <div
+        className="navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          className="nav-bar_btn text-center btn btn-primary"
+          href="/"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+           
+          Home
+        </a>
+        <a
+          className="nav-link"
+          data-rb-event-key={null}
+          href="#"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          <div
+            className="notification-wrapper"
+          >
+            <button
+              id="bell-button"
+              onClick={[Function]}
+              type="button"
+            >
+              <img
+                alt="bell"
+                className="notification-bell"
+                src="test-file-stub"
+              />
+            </button>
+            <div
+              className="notif-panel container"
+              style={
+                Object {
+                  "display": "none ",
+                  "height": "280px",
+                }
+              }
+            >
+              <p>
+                Notifications
+                <span
+                  style={
+                    Object {
+                      "display": "none",
+                    }
+                  }
+                >
+                  all notification already seen
+                </span>
+              </p>
+              <div
+                className="notifications"
+                style={null}
+              />
+              <div
+                className="row notif-buttons"
+              >
+                <button
+                  className="col"
+                  id="mark-all"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  mark all as read
+                </button>
+                <button
+                  className="col"
+                  id="view-more"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  view more
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+        <img
+          alt="profile"
+          className="nav-profile-img"
+          src="www.image.example"
+        />
+        <div
+          className="select-lang dropdown"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-bar_dropdown nav-bar_dropdown-inherit"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            en
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>,
+  <div
+    className="facility-container container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="facilities-title col"
+      >
+        Facilities available
+      </div>
+    </div>
+    <div
+      className="facility-card-row row"
+    >
+      <div
+        className="facility-card"
+      >
+        <div
+          className="average-rating"
+        >
+          <svg
+            enableBackground="new 0 0 24 24"
+            height="25"
+            id="color"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+              fill="#ffc107"
+            />
+          </svg>
+          <svg
+            enableBackground="new 0 0 24 24"
+            height="25"
+            id="color"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+              fill="#ffc107"
+            />
+          </svg>
+          <svg
+            enableBackground="new 0 0 24 24"
+            height="25"
+            id="color"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+              fill="#ffc107"
+            />
+          </svg>
+          <svg
+            enableBackground="new 0 0 24 24"
+            height="25"
+            id="color"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+              fill="#ffc107"
+            />
+          </svg>
+          <svg
+            enableBackground="new 0 0 24 24"
+            height="25"
+            id="color"
+            viewBox="0 0 24 24"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m23.363 8.584-7.378-1.127-3.307-7.044c-.247-.526-1.11-.526-1.357 0l-3.306 7.044-7.378 1.127c-.606.093-.848.83-.423 1.265l5.36 5.494-1.267 7.767c-.101.617.558 1.08 1.103.777l6.59-3.642 6.59 3.643c.54.3 1.205-.154 1.103-.777l-1.267-7.767 5.36-5.494c.425-.436.182-1.173-.423-1.266z"
+              fill="#ffc107"
+            />
+          </svg>
+        </div>
+        <div
+          className="facility-image"
+        >
+          <img
+            alt="profile"
+            className="facility-iamge"
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="facility-info"
+        >
+          <span
+            className="facility-name"
+          >
+            Marriot
+          </span>
+          <span
+            className="facility-location"
+          >
+            Nairobi
+          </span>
+        </div>
+        <div
+          className="rating-likes"
+        >
+          <div
+            className="likes"
+          >
+            <button
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  className="like-svg"
+                  d="M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z"
+                  fill="#065471"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  className="like-svg"
+                  d="M20 3h-1v13h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 16h7l-1.122 3.368A2 2 0 0 0 11.775 22H12l5-5.438V3H6l-3.937 8.649l-.063.293V14a2 2 0 0 0 2 2z"
+                  fill="#065471"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className="ratings"
+          >
+            <button
+              type="button"
+            >
+              Add rating
+            </button>
+          </div>
+        </div>
+        <button
+          className="book-facility"
+          disabled={false}
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="button"
+        >
+          Book
+        </button>
+      </div>
+    </div>
+    <form
+      className="book-popup shadow p-3 mb-5 bg-white rounded"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <div
+        className="book-error"
+      >
+        please choose a room first
+      </div>
+      <div
+        className="rooms"
+      >
+        <span>
+          available rooms
+        </span>
+        <select
+          defaultValue=""
+          name="roomId"
+          onChange={[Function]}
+        >
+          <option
+            disabled={true}
+            value=""
+          >
+            available rooms
+          </option>
+        </select>
+      </div>
+      <div
+        className="checkin"
+      >
+        <span>
+          Checkin
+        </span>
+        <input
+          min="2020-06-05"
+          name="checkin"
+          onChange={[Function]}
+          type="date"
+          value="2020-06-05"
+        />
+      </div>
+      <div
+        className="checkout"
+      >
+        <span>
+          Checkout
+        </span>
+        <input
+          min="2020-06-05"
+          name="checkout"
+          onChange={[Function]}
+          type="date"
+          value="2020-06-05"
+        />
+      </div>
+      <div
+        className="book-button"
+      >
+        <button
+          className="cancel-booking btn btn-primary"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Cancel
+        </button>
+        <button
+          className="booking-button btn btn-primary"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Book
+        </button>
+      </div>
+    </form>
+  </div>,
+  <div
+    className="fixed-bottom footer container-fluid"
+  >
+    <div
+      className="justify-content-md-center row"
+    >
+      <div
+        className="footer_text col-md-auto"
+      >
+        Copyright 2020 devrepublic team. All rights reserved.
+      </div>
+    </div>
+  </div>,
+]
+`;
