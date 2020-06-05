@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index dashboard snapshot should create a dashboard container snapshot 1`] = `undefined`;
+
+exports[`Super Admin dashboard snapshot should create a dashboard snapshot 1`] = `undefined`;
+
+exports[`pop Up snapshot should create a dashboard snapshot 1`] = `undefined`;

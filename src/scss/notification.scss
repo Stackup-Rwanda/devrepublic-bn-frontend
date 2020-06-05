@@ -1,0 +1,100 @@
+@import './_variables';
+@import './_config';
+
+.notif-panel {
+  position: fixed;
+  width: 300px !important;
+  right: 95px;
+  height: 260px;
+  top: 64px;
+  background-color: red;
+  background-color: white;
+  margin-right: 400px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.48);
+  color: $primary_color;
+  cursor: initial;
+  @include large-mobile {
+    top: 165px;
+  }
+  @media (max-width: 400px)  {
+    right: 10px;
+    width: 100% !important;
+    height: 240px;
+
+  }
+}
+.notification-wrapper .container p {
+  font-size: 23px;
+  width: inherit;
+  padding-top: 2px;
+}
+.notifications {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+  height: 180px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.notification-item {
+  border: 1px solid rgba(0, 0, 0, 0.48);
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.read-notif {
+  border-radius: 50%;
+  border: hidden;
+  height: 15px !important;
+  width: 15px !important;
+  display: block !important;
+  background-color: $primary_color;
+  margin-top: 60%;
+}
+.notif-panel button {
+  border: none;
+  padding: 5px;
+  letter-spacing: 0.3px;
+}
+.notif-panel button:hover {
+  text-decoration: underline;
+}
+.notif-panel  button:focus {
+  outline: none;
+}
+.notif-panel p span {
+  padding-left: 20px;
+  font-size: 10px;
+}
+
+.notification-wrapper img {
+  height: 20px;
+}
+#bell-button {
+  border: none !important;
+  background-color: transparent;
+}
+#bell-button img {
+  display: inline-block;
+  text-align: center;
+}
+.new-notification {
+  background-color: white;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: fixed;
+  margin-left: -8px;
+}
+.notif-message a {
+  color: $primary_color;
+}
+.notif-message a:hover {
+  color: $primary_color;
+}
+#bell-button:focus {
+  outline: none;
+}

@@ -1,0 +1,124 @@
+@import './_variables';
+@import '~bootstrap/scss/bootstrap';
+@import './_config';
+
+.whole-container {
+    margin-top: 59px;
+}
+
+
+.all-icons{
+    margin-left: 450px;
+    margin-top: 20px;
+}
+
+.icon{
+height: 30px;
+width: 30px;
+}
+.add-icon{
+    margin-left: 20px;
+}
+.travel-request{
+    padding-top: 10px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    width: 100%;
+    color: $secondary-color;
+}
+.request-dashboard-title{
+    font-size: 20px;
+    margin-top: 20px;
+    color: $primary-color;
+
+}
+.All-travel-Requests-title{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: rgb(174, 174, 174);
+}
+.table-container{
+    margin-top: 40px;
+}
+.status-btn{
+    background-color: rgb(1, 164, 93);
+    color: white;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 10px;
+    width: 95px;
+}
+.rows-container{
+    margin-top: 10px;
+}
+
+.col-titles{
+    color: $primary-color;
+}
+
+.table-header{
+    margin-right: 20px;
+}
+
+.rejectedStatus{
+background-color: rgb(201, 26, 26);
+color: white;
+border-radius: 20px;
+padding: 5px;
+box-shadow: 1px 1px #a7a7a7
+}
+
+.col-status{
+width: 20px;
+}
+
+.selectable{
+    cursor: pointer;
+}
+.trip-details-reason{
+    font-weight: bold;
+    font-size: 14px;
+    color: $primary-color;
+}
+
+.firstName {
+ padding: 1px;
+}
+.lastName{
+padding: 5px;
+}
+.super-admin-dashboard-view{
+    overflow-y: auto;
+}
+
+.profile-image{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+.no-requests{
+    color: $primary-color;
+font-size: 20px;
+}
+
+.col-departure-date .dropdown .dropdown-item:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    color: white;
+    background: rgb(27, 44, 71) !important;
+}
+  
+.col-departure-date .dropdown-menu {
+position: fixed;
+}
+  
+.col-departure-date  .dropdown .dropdown-menu .dropdown-item {
+padding: 1rem;
+margin-left: 0;
+}
+
+.col-departure-date  .dropdown .dropdown-menu .dropdown-item:hover {
+box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+color: white;
+background: rgb(27, 44, 71) !important;
+}
+  
+  

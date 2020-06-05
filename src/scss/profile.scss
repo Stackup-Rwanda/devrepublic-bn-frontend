@@ -1,0 +1,176 @@
+@import './__variables';
+@import './_config';
+
+.profile-column {
+  background-color: white;
+  
+}
+body {
+  overflow-x: hidden;
+
+  @include large-mobile {
+    overflow: auto;
+  }
+}
+
+.container-lg {
+  margin-top: 3rem;
+  padding: 2.7rem;
+  min-height: calc(100vh - 7rem);
+}
+.profile-column img {
+  border-radius: 50%;
+  display: block;
+  margin-left: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.upload {
+  position: relative;
+  align-self: center;
+  margin-right: 7.5rem;
+}
+.upload input[type=file] {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 80px;
+  height: 40px;
+  z-index: 2;
+  display: inline-block;
+}
+.upload button {
+  top: 0;
+  position: absolute;
+  background-color: $primary-color;
+  width: 100px;
+}
+.profile-column {
+  @include large-mobile {
+    padding-bottom: 4rem;
+}
+}
+.profile-column p:first-of-type {
+  justify-self: center;
+  margin-right: 1rem;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+  width: fit-content;
+}
+.profile-column p:last-of-type {
+  margin-top: 4.5rem;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  margin-right: 1rem;
+}
+.profile-column p:last-of-type span:first-of-type
+,.profile-column p:last-of-type span:last-of-type {
+  display: inline-block;
+  padding-top: 6px;
+  height: 34px;
+  font-weight: 300;
+}
+.profile-column p:last-of-type span:first-of-type {
+  background-color: $secondary-color;
+  width: 65px;
+}
+.profile-column p:last-of-type span:last-of-type {
+  background-color: $primary-color;
+  width: 105px;
+  color: #fffffa;
+  min-height: fit-content;
+  min-width: fit-content;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  font-size: 16px;
+  margin-top: 3px;
+  font-weight: 100;
+}
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.custom-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border: solid 5px $primary-color;
+  border-radius: 50%;
+  background-color: #eee;
+}
+.check-container input:checked + .custom-check {
+  background-color: $secondary-color;
+}
+
+.email-notif-text {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  margin-left: 1.2rem;
+}
+form input[type=text],
+form input[type=email],
+form input[type=date] {
+  background: #F4F5F4;
+  border: none;
+  border-radius: 0;
+  height: 40px;
+} 
+#form-button {
+  margin: 0 auto;
+  width: fit-content;
+  background-color: $primary-color;
+
+}
+#form-button:hover {
+  background-color: #03435B;
+}
+
+.input-error {
+  display: none;
+  width: 100%;
+  margin-top: .15rem;
+  font-size: 85%;
+  color: #dc3545;
+}
+.input-master:invalid + .input-error {
+  display: block;
+}
+.input-master:valid + .input-error {
+  display: none;
+}
+.submit-success {
+  display: none;
+}
+.profile-container .fixed-bottom {
+  position: relative !important;
+  margin-top: 8px;
+    @include large-mobile {
+      position: relative !important;
+  }
+}
+input[type=checkbox] + label {
+    font-size: 18px;
+    padding-left: 10px;
+}
+.form-check {
+  margin-left: 10px;
+}
