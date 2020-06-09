@@ -113,6 +113,20 @@
     "please choose a room first": "veuillez d'abord choisir une chambre",
     "available rooms": "chambres disponibles",
     "Checkin": "arriver",
-    "Checkout": "quitter"
-
+    "Checkout": "quitter",
+    "Departure:": "Départ",
+    "One way trip": "Un voyage sans retour",
+    "Return trip":"Voyage de retour",
+    "Multicity trip": "Voyage Multicity",
+    "New Request": "Nouvelle requête",
+    "Location": "Emplacement",
+    "Destination": "Destination",
+    "Trip Reason":"Raison du voyage",
+    "Create": "Créer",
+    "New trip request": "Nouvelle demande de voyage",
+    "One way": "Une manière",
+    "Return": "Revenir",
+    "Return Date:": "Date de retour:",
+    "ADD STOPS": "AJOUTER DES ARRÊTS",
+    "Remove": "Retirer"
 }

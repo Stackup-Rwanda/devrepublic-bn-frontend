@@ -27,7 +27,7 @@ class Dashboard extends Component {
     const { token } = this.state;
     switch (role) {
       case 'requester':
-        return <RequesterDashboard token={token} />;
+        return <RequesterDashboard token={token} history={this.props.history} />;
       case 'manager':
         return <ManagerDashboard token={token} />;
       case 'super administrator':
@@ -51,4 +51,5 @@ export default Dashboard;
 
 Dashboard.propTypes = {
   location: PropTypes.object,
+  history: PropTypes.object,
 };

@@ -135,6 +135,7 @@ describe('profile reducer', () => {
     residence: '',
     birthdate: '',
     image: '',
+    gender: '',
     profileFetchError: '',
     fetchImageError: '',
     setEmailNotifError: '',

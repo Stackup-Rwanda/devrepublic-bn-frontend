@@ -1,15 +1,18 @@
+/* eslint-disable react/no-deprecated */
 import React, { Component } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { connect } from 'react-redux';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 import PropTypes from 'prop-types';
-import Container from 'react-bootstrap/Container';
 import '../../scss/requestTable.scss';
 import AuthNavBar from '../sharedComponents/AuthNavBar';
 import Footer from '../sharedComponents/Footer';
-import NewAndSearch from './NewAndSearch';
 import { getRequestsAction } from '../../redux/actions/getRequests';
+import { getUserInfo } from '../../redux/actions/userActions';
 import {
   requestDates, checkStatus, columnTitles, reasonColumnTitle, spinnner, dashboardSidebar,
 }
@@ -17,6 +20,7 @@ import {
 import translate from '../languages/Translate';
 import pagination from '../../util/pagination';
 import MainHeader from './MainHeader';
+import TripTypeModal from './createRequest/TripTypeModal';
 
 class RequesterDashboard extends Component {
   constructor(props) {
@@ -26,25 +30,43 @@ class RequesterDashboard extends Component {
       displayedRequests: [],
       bookings: [],
       loading: true,
+      oneWayTrip: 'One way trip',
+      returnTrip: 'Return trip',
+      multicityTrip: 'Multicity trip',
+      tripType: '',
+      firstName: '',
+      lastName: '',
+      role: '',
+      gender: '',
     };
   }
 
   async componentDidMount() {
     const { token } = this.props;
     const actionOutput = await this.props.getRequestsAction(token);
+    await this.props.getUserInfo(token);
     this.setState({
       requests: actionOutput.payload.data.requests,
       bookings: actionOutput.payload.data.bookings,
       loading: false,
+      disable: false,
+      firstName: this.props.profile.firstName,
+      lastName: this.props.profile.lastName,
+      role: this.props.profile.role,
+      gender: this.props.profile.gender,
     });
     this.setState((prevState) => ({ displayedRequests: pagination(prevState.requests, 1) }));
+  }
+
+  async componentWillReceiveProps(nextProps) {
+    this.setState(() => ({ requests: nextProps.requests.requests }));
   }
 
   findAccommodation = (request, booking) => {
     switch (request.id) {
       case `${booking.requestId}`:
         return (
-          <p className="ml-1 bg-danger">{booking.facilityName}</p>
+          <p className="ml-1">{booking.facilityName}</p>
         );
       default:
         return (
@@ -53,15 +75,42 @@ class RequesterDashboard extends Component {
     }
   }
 
+
   filter = (newArray) => {
     this.setState({
       displayedRequests: newArray,
     });
   }
 
+  hanldeCancel = () => {
+    this.setState({ show: false });
+  }
+
+  hanldeSelectedTrip = (event) => {
+    const {
+      oneWayTrip, returnTrip, multicityTrip,
+    } = this.state;
+    this.setState({ show: true });
+    switch (event.target.value) {
+      case oneWayTrip:
+        return this.setState({ tripType: oneWayTrip });
+      case returnTrip:
+        return this.setState({ tripType: returnTrip });
+      case multicityTrip:
+        return this.setState({ tripType: multicityTrip });
+      default:
+        return null;
+    }
+  };
+
   render() {
     const {
       requests, bookings, loading, displayedRequests,
+      show, oneWayTrip, returnTrip, multicityTrip, tripType, disable,
+      firstName,
+      lastName,
+      role,
+      gender,
     } = this.state;
     const requestsLength = requests.length;
     const Accommodation = 'Accommodation';
@@ -77,13 +126,31 @@ class RequesterDashboard extends Component {
               <Col lg="2" sm="1" xs="1" md="2">
                 {dashboardSidebar()}
               </Col>
+              <TripTypeModal
+                tripType={tripType}
+                userProfile={{
+                  firstName, lastName, role, gender,
+                }}
+                show={show}
+                disable={disable}
+                hanldeCancel={this.hanldeCancel}
+              />
               <Col lg="10" sm="11" md="9" xs="11" className="col-1">
 
                 <Row>
-                  <MainHeader allTrips={requests} filter={this.filter} />
                   <Col sm="12" md="4" lg="4">
-                    <div className="all-icons text-center">
-                      <NewAndSearch />
+                    <Col className="requester-Dashboard">
+                      <div className="request-dashboard-title ">
+                        { translate('Requester Dashboard') }
+                      </div>
+                      <MainHeader allTrips={requests} filter={this.filter} />
+                    </Col>
+                    <div className="btn-container ml-5">
+                      <DropdownButton className="newRequest" title={translate('New Request')} variant="inherit">
+                        <Dropdown.Item onClick={this.hanldeSelectedTrip} value={oneWayTrip} className="trip-item" as="button">{translate('One way trip')}</Dropdown.Item>
+                        <Dropdown.Item onClick={this.hanldeSelectedTrip} className="trip-item" as="button" value={returnTrip}>{translate('Return trip')}</Dropdown.Item>
+                        <Dropdown.Item onClick={this.hanldeSelectedTrip} className="trip-item" as="button" value={multicityTrip}>{translate('Multicity trip')}</Dropdown.Item>
+                      </DropdownButton>
                     </div>
                   </Col>
                 </Row>
@@ -126,7 +193,6 @@ class RequesterDashboard extends Component {
                               </div>
                             )
                 }
-                <Row />
               </Col>
             </Row>
           </Container>
@@ -137,13 +203,17 @@ class RequesterDashboard extends Component {
   }
 }
 
-const MapStateToProps = ({ requests }) => ({
+const MapStateToProps = ({ requests, profile }) => ({
   requests,
+  profile,
 });
 export { RequesterDashboard };
-export default connect(MapStateToProps, { getRequestsAction })(RequesterDashboard);
+export default connect(MapStateToProps, { getRequestsAction, getUserInfo })(RequesterDashboard);
 
 RequesterDashboard.propTypes = {
   getRequestsAction: PropTypes.func,
+  getUserInfo: PropTypes.func,
   token: PropTypes.string,
+  profile: PropTypes.object,
+  requests: PropTypes.object,
 };

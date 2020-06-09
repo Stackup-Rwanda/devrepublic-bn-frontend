@@ -7,7 +7,7 @@ export const checkStatus = (request) => {
   switch (request.status) {
     case 'rejected':
       return (
-        <p className="rejectedStatus">{translate(`${request.status}`)}</p>
+        <p className="rejectedStatuss">{translate(`${request.status}`)}</p>
       );
     case 'open':
       return (

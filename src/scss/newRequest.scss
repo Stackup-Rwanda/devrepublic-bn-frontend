@@ -1,0 +1,142 @@
+@import './__variables';
+@import './_config';
+
+.btn-container{
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+.newRequest{
+    background-color: $secondary-color!important;
+  width: 9em;
+  border-radius: 7px;
+}
+.row-info-container{
+  cursor: pointer;
+}
+.trip-item:hover{
+    background-color: $secondary-color!important;
+    color: $primary-color!important;
+  }
+  .trip-item{
+    background-color:  white!important;
+    color: $primary-color!important;
+  }
+
+  .side-placeholder{
+    width: 130px;
+    text-align: 'center';
+    color: $primary-color!important;  
+  }
+
+  .trip-content{
+    width: 100%;
+  }
+  .trip-content  label {
+    font-weight: bold;
+    color: $primary-color;  
+
+  }
+  .label {
+    font-weight: bold;
+    color: $primary-color;  
+  }
+  .stop-label{
+    font-weight: bold;
+    font-size: 12px;
+    color: $primary-color;  
+  }
+  .trip-title{
+    font-weight: bold;
+  font-size: 20px;
+  color: $primary-color;
+  }
+
+  .create-btn{
+    background-color: $primary-color!important;
+    border-color: $primary-color!important;
+  }
+  .cancel-btn{
+    background-color: white!important;
+    border-color: $primary-color!important;
+    color: $primary-color!important;
+  }
+  .cancel-btn:hover{
+    background-color: rgb(176, 6, 6)!important;
+    border-color: rgb(176, 6, 6)!important;
+    color: white!important;
+  }
+  .create-btn:hover{
+    background-color: $secondary-color!important;
+    border-color: $secondary-color!important;
+    color: $primary-color!important;
+  }
+  .modal-footer{
+    align-self: center!important;
+  }
+  .modal-header{
+  color: $primary-color;  
+  }
+  .trip-type{
+    background-color: $primary-color!important;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-left: 10px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+.modal-body{
+  width: 25rem;
+  align-self: center!important;
+  margin-top: 1px;
+}
+.width{
+  width: 10px;
+
+}
+.add-stops{
+  background-color: $secondary-color!important;
+  color: $primary-color!important;
+  font-weight: bold;
+  cursor: pointer;
+}
+.stopNo{
+  color: $primary-color!important;
+  font-weight: bold;
+  cursor: pointer;
+
+
+
+}
+.add-stops:hover{
+  color: $secondary-color!important;
+  background-color: $primary-color!important;
+
+
+}
+.stops{
+  height: 10rem!important;
+}
+.error-message{
+  font-size: 12px;
+  padding-top: 1px;
+}
+.alert-message{
+height: 20px;
+padding-bottom: 5px;
+font-size: 15px;
+}
+.no-error{
+  font-size: 0px;
+  padding: 0px;
+  margin: 0px;
+  height: 0px;
+}
+.error-color{
+  color: red;
+}
+.success-color{
+  color: rgb(105, 153, 9);
+}
